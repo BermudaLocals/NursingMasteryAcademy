@@ -11,31 +11,20 @@ function speak(t) {
 function unlockPortal() {
     const name = document.getElementById('student-name').value;
     document.getElementById('student-display').innerText = name;
-    
-    // THE FIX: Completely remove the login gate element
-    const gate = document.getElementById('login-gate');
-    gate.style.display = 'none';
-    
-    // Ensure the main body can scroll now
-    document.body.style.overflow = 'auto';
-    
-    speak("System active. Welcome Director " + name);
+    document.getElementById('login-gate').style.display = 'none';
+    document.getElementById('main-portal').style.display = 'block';
+    speak("Director " + name + " online.");
 }
 
 function loadModule(id) {
     const cards = document.getElementsByClassName('content-card');
     for (let card of cards) { card.style.display = 'none'; }
-    
-    const target = document.getElementById('mod-' + id);
-    if(target) { target.style.display = 'block'; }
+    document.getElementById('mod-' + id).style.display = 'block';
 
     const btns = document.getElementsByClassName('nav-btn');
     for (let btn of btns) { btn.classList.remove('active'); }
-    
-    const activeBtn = document.getElementById('nav-' + id);
-    if(activeBtn) activeBtn.classList.add('active');
-    
-    speak("Loading module");
+    document.getElementById('nav-' + id).classList.add('active');
+    speak("Accessing module");
 }
 
 function answer(type) {
@@ -43,14 +32,16 @@ function answer(type) {
         speak("Correct judgment.");
         progress = Math.min(progress + 50, 100);
         document.getElementById('progress-bar').style.width = progress + "%";
-        document.getElementById('progress-text').innerText = "Clinical Progress: " + progress + "%";
+        document.getElementById('progress-text').innerText = "Progress: " + progress + "%";
+        
         if(progress >= 100) {
-            document.getElementById('exam-btn').classList.remove('locked');
-            speak("Certification available.");
+            const eb = document.getElementById('exam-btn');
+            eb.classList.remove('locked');
+            document.getElementById('cert-action').style.display = 'block';
+            document.getElementById('exam-status').innerText = "READY FOR GRADUATION";
+            speak("Certification unlocked.");
         }
-    } else {
-        speak("Clinical error. Review vitals.");
-    }
+    } else { speak("Incorrect. Check vitals."); }
 }
 
 function calculateDose() {
@@ -69,6 +60,6 @@ function checkGlucose(v) {
 }
 
 function togglePreMed() {
-    speak("Pre Med Vault Unlocked");
+    speak("Pre Med Vault Active.");
     alert("Physician-Track logic activated.");
 }

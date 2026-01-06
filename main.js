@@ -27,36 +27,50 @@ function calculateDose() {
     const order = document.getElementById('dose-order').value;
     const hand = document.getElementById('dose-hand').value;
     if(order && hand) {
-        const result = (order / hand).toFixed(2);
-        document.getElementById('calc-result').innerText = "Result: " + result + " mL";
-        speak("The calculated volume is " + result + " milliliters.");
+        const res = (order / hand).toFixed(2);
+        document.getElementById('calc-result').innerText = "Result: " + res + " mL";
+        speak(res + " milliliters.");
     }
 }
 
 function answer(res) {
     if(res === 'correct') {
-        speak("Correct. This is the elite standard of care.");
+        speak("Correct judgment.");
         progress = Math.min(progress + 50, 100);
         document.getElementById('progress-bar').style.width = progress + "%";
         document.getElementById('progress-text').innerText = "Progress: " + progress + "%";
-        if(progress >= 100) document.getElementById('exam-btn').classList.remove('locked');
-    } else {
-        speak("Clinical error detected. Re-evaluate the patient's vitals immediately.");
-    }
+        if(progress >= 100) {
+            document.getElementById('exam-btn').classList.remove('locked');
+            document.getElementById('cert-action').classList.remove('hidden');
+            document.getElementById('exam-status').innerText = "CERTIFICATION ELIGIBLE";
+        }
+    } else { speak("Incorrect. Check vitals."); }
 }
 
 function checkGlucose(v) {
-    if(v < 70) speak("Critical Hypoglycemia. Apply the 15-15 dietary rule now.");
+    if(v < 70) speak("Hypoglycemia alert. 15 grams of carbs.");
     answer('correct');
 }
 
 function changeLanguage() {
     lang = document.getElementById('lang-select').value;
-    speak("Language preference updated.");
+    speak("Updated.");
 }
 
 function togglePreMed() {
-    speak("Unlocking the Doctor's Vault. Differential diagnosis logic activated.");
-    alert("Pre-Med/Physician-Track Vault is now unlocked for your session.");
-    document.getElementById('mod-video').classList.remove('hidden');
+    speak("Physician Vault Active.");
+    alert("Advanced Pathophysiology modules unlocked.");
+}
+
+function sendCertification() {
+    const student = document.getElementById('student-display').innerText;
+    // NOTE: Replace YOUR_FORMSPREE_ID when ready
+    fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ student: student, status: "Graduated" })
+    }).then(() => {
+        speak("Director notified.");
+        alert("Director notified!");
+    });
 }

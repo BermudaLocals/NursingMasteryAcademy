@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursing Mastery Academy | Executive Portal</title>
+    <title>Nursing Mastery Academy | Elite Executive Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,9 +11,9 @@
     <div id="login-gate">
         <div class="glass-card">
             <h1 class="gold-text">Nursing Mastery Academy</h1>
-            <p>Director Entrance | High-Stakes Training</p>
+            <p>Director Entrance | High-Stakes Clinical Training</p>
             <input type="text" id="student-name" placeholder="Student Name" value="Tash Robinson">
-            <button class="btn-gold" onclick="unlockPortal()">INITIALIZE PORTAL</button>
+            <button class="btn-gold" onclick="unlockPortal()">INITIALIZE STUDENT PORTAL</button>
         </div>
     </div>
 
@@ -29,7 +29,7 @@
                     <option value="es-ES">🇪🇸 Español</option>
                     <option value="fr-FR">🇫🇷 Français</option>
                 </select>
-                <button class="tag-gold" onclick="togglePreMed()">🔓 PRE-MED VAULT</button>
+                <button class="tag-gold" onclick="togglePreMed()">🔓 UNLOCK PRE-MED VAULT ($)</button>
             </div>
         </header>
 
@@ -41,10 +41,20 @@
                     <div class="progress-container"><div id="progress-bar"></div></div>
                     <p id="progress-text">Progress: 0%</p>
                 </div>
+
+                <div class="calc-box">
+                    <h4>Dosage Calculator</h4>
+                    <input type="number" id="dose-order" placeholder="Ordered (mg)">
+                    <input type="number" id="dose-hand" placeholder="On Hand (mg)">
+                    <button onclick="calculateDose()">Calc Volume</button>
+                    <p id="calc-result">Result: --</p>
+                </div>
+
                 <nav>
                     <button onclick="loadModule('vitals')" class="nav-btn active">1. Triage Mastery</button>
                     <button onclick="loadModule('diabetic')" class="nav-btn">2. Diabetic/Dietary</button>
-                    <button id="exam-btn" onclick="loadModule('exam')" class="nav-btn locked">🎓 Final Exam</button>
+                    <button onclick="loadModule('video')" class="nav-btn">🎬 Video Library (Add-on)</button>
+                    <button id="exam-btn" onclick="loadModule('exam')" class="nav-btn locked">🎓 Final Certification</button>
                 </nav>
             </aside>
 
@@ -65,6 +75,16 @@
                     <div class="sim-box">
                         <p><strong>Scenario:</strong> Glucose is 55 mg/dL. Patient is shaky.</p>
                         <button class="btn-gold" onclick="checkGlucose(55)">Apply 15-15 Rule</button>
+                    </div>
+                </div>
+
+                <div id="mod-video" class="content-card hidden">
+                    <h1>🎬 Elite Clinical Video Library</h1>
+                    <div class="video-placeholder">
+                        <p>Video content is currently being processed by the Director.</p>
+                        <div class="video-wrapper">
+                             <img src="https://via.placeholder.com/800x450?text=Video+Coming+Soon" style="width:100%; border-radius:15px;">
+                        </div>
                     </div>
                 </div>
                 

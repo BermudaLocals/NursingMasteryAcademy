@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursing Mastery Academy | Director Portal</title>
+    <title>Nursing Mastery Academy | Executive Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="login-gate">
         <div class="glass-card">
-            <h1 class="gold-text">Nursing Mastery Academy</h1>
-            <p>Clinical Director Entrance</p>
-            <input type="text" id="student-name" placeholder="Enter Name" value="Tash Robinson">
-            <button class="btn-gold-large" onclick="unlockPortal()">INITIALIZE STUDENT PORTAL</button>
+            <h1 style="color: #c5a059; margin-bottom: 10px;">Nursing Mastery Academy</h1>
+            <p style="color: white; margin-bottom: 20px;">Clinical Director Entrance</p>
+            <input type="text" id="student-name" placeholder="Enter Name" value="Tash Robinson" style="padding: 12px; border-radius: 8px; border: none; width: 80%;">
+            <button class="btn-gold-large" onclick="unlockPortal()">INITIALIZE PORTAL</button>
         </div>
     </div>
 
-    <div id="main-portal" style="display:none;">
+    <div id="main-portal">
         <header class="faculty-bar">
             <div class="faculty-info">
                 <div class="director-avatar"></div>
                 <div><h2 id="welcome-header">Director's Office</h2><p id="welcome-msg">Clinical Rotation Active</p></div>
             </div>
             <div class="header-controls">
-                <select id="lang-select" onchange="changeLanguage()">
-                    <option value="en-US">🇺🇸 English</option>
-                    <option value="es-ES">🇪🇸 Español</option>
-                </select>
                 <button class="tag-gold" onclick="togglePreMed()">🔓 PRE-MED VAULT</button>
             </div>
         </header>
@@ -38,21 +35,21 @@
                     <div class="tash-img"></div>
                     <h3 id="student-display">Student</h3>
                     <div class="progress-container"><div id="progress-bar"></div></div>
-                    <p id="progress-text">Progress: 0%</p>
+                    <p id="progress-text" style="font-size: 0.8rem;">Clinical Progress: 0%</p>
                 </div>
 
                 <div class="calc-box">
-                    <h4>Dosage Engine</h4>
+                    <h4 style="margin-top:0;">Dosage Engine</h4>
                     <input type="number" id="dose-order" placeholder="Order">
                     <input type="number" id="dose-hand" placeholder="Hand">
-                    <button onclick="calculateDose()">Calculate</button>
-                    <p id="calc-result">Result: --</p>
+                    <button onclick="calculateDose()" style="background: #c5a059; color:white; border:none; padding:8px; width:100%; border-radius:5px; cursor:pointer;">Calculate</button>
+                    <p id="calc-result" style="margin-top:10px; font-weight:bold;">Result: --</p>
                 </div>
 
                 <nav id="sidebar-nav">
                     <button onclick="loadModule('vitals')" id="nav-vitals" class="nav-btn active">1. Triage Mastery</button>
                     <button onclick="loadModule('diabetic')" id="nav-diabetic" class="nav-btn">2. Endocrine/Dietary</button>
-                    <button onclick="loadModule('video')" id="nav-video" class="nav-btn">🎬 Clinical Videos</button>
+                    <button onclick="loadModule('video')" id="nav-video" class="nav-btn">🎬 Video Simulation</button>
                     <button id="exam-btn" onclick="loadModule('exam')" class="nav-btn locked">🎓 Certification</button>
                 </nav>
             </aside>
@@ -61,7 +58,7 @@
                 <div id="mod-vitals" class="content-card">
                     <h1>Module 1: Vital Signs Triage</h1>
                     <div class="sim-box">
-                        <p><strong>Scenario:</strong> BP 88/44, HR 128, O2 89%. Patient is dizzy. Status?</p>
+                        <p><strong>Scenario:</strong> BP 88/44, HR 128, O2 89%. Status?</p>
                         <div class="btn-group">
                             <button class="btn-red" onclick="answer('correct')">RED: EMERGENCY</button>
                             <button class="btn-outline" onclick="answer('wrong')">GREEN: STABLE</button>
@@ -72,21 +69,14 @@
                 <div id="mod-diabetic" class="content-card" style="display:none;">
                     <h1>Module 2: Diabetic Logic</h1>
                     <div class="sim-box">
-                        <p><strong>Scenario:</strong> Glucose 55 mg/dL. Shaky/Pale.</p>
+                        <p><strong>Scenario:</strong> Glucose 55 mg/dL. Action?</p>
                         <button class="btn-gold" onclick="checkGlucose(55)">Apply 15-15 Rule</button>
                     </div>
                 </div>
 
                 <div id="mod-video" class="content-card" style="display:none;">
                     <h1>🎬 Video Simulation</h1>
-                    <div class="video-placeholder">AI Content Loading...</div>
-                </div>
-
-                <div id="mod-exam" class="content-card" style="display:none;">
-                    <h1>🎓 Final Certification</h1>
-                    <div id="cert-action" class="hidden">
-                        <button class="btn-gold" onclick="sendCertification()">CLAIM CERTIFICATE</button>
-                    </div>
+                    <p>AI Clinical Simulations Loading...</p>
                 </div>
             </main>
         </div>

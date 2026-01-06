@@ -4,7 +4,7 @@ let lang = "en-US";
 function speak(t) {
     window.speechSynthesis.cancel();
     const m = new SpeechSynthesisUtterance(t);
-    m.lang = lang; m.rate = 1;
+    m.lang = lang;
     window.speechSynthesis.speak(m);
 }
 
@@ -12,52 +12,44 @@ function unlockPortal() {
     const name = document.getElementById('student-name').value;
     document.getElementById('student-display').innerText = name;
     
-    // Switch Views
-    document.getElementById('login-gate').style.display = 'none';
-    document.getElementById('main-portal').style.display = 'block';
+    // THE FIX: Completely remove the login gate element
+    const gate = document.getElementById('login-gate');
+    gate.style.display = 'none';
     
-    // Force Module 1 to show
-    loadModule('vitals');
+    // Ensure the main body can scroll now
+    document.body.style.overflow = 'auto';
     
-    speak("Initialization complete. Welcome, " + name);
+    speak("System active. Welcome Director " + name);
 }
 
 function loadModule(id) {
-    // Hide all modules using style.display
     const cards = document.getElementsByClassName('content-card');
-    for (let card of cards) {
-        card.style.display = 'none';
-    }
+    for (let card of cards) { card.style.display = 'none'; }
     
-    // Show specific module
     const target = document.getElementById('mod-' + id);
-    if(target) {
-        target.style.display = 'block';
-    }
+    if(target) { target.style.display = 'block'; }
 
-    // Nav highlights
     const btns = document.getElementsByClassName('nav-btn');
-    for (let btn of btns) {
-        btn.classList.remove('active');
-    }
+    for (let btn of btns) { btn.classList.remove('active'); }
+    
     const activeBtn = document.getElementById('nav-' + id);
     if(activeBtn) activeBtn.classList.add('active');
+    
+    speak("Loading module");
 }
 
 function answer(type) {
     if(type === 'correct') {
-        speak("Correct judgment. Progress saved.");
+        speak("Correct judgment.");
         progress = Math.min(progress + 50, 100);
         document.getElementById('progress-bar').style.width = progress + "%";
-        document.getElementById('progress-text').innerText = "Progress: " + progress + "%";
-        
+        document.getElementById('progress-text').innerText = "Clinical Progress: " + progress + "%";
         if(progress >= 100) {
             document.getElementById('exam-btn').classList.remove('locked');
-            document.getElementById('cert-action').classList.remove('hidden');
-            speak("Final assessment unlocked.");
+            speak("Certification available.");
         }
     } else {
-        speak("Incorrect. Review your vitals.");
+        speak("Clinical error. Review vitals.");
     }
 }
 
@@ -77,6 +69,6 @@ function checkGlucose(v) {
 }
 
 function togglePreMed() {
-    speak("Physician Vault active.");
-    alert("Pre-Med Clinical logic enabled.");
+    speak("Pre Med Vault Unlocked");
+    alert("Physician-Track logic activated.");
 }

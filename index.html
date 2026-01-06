@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursing Mastery Academy | Elite Executive Portal</title>
+    <title>Nursing Mastery Academy | Executive Clinical Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,9 +11,10 @@
     <div id="login-gate">
         <div class="glass-card">
             <h1 class="gold-text">Nursing Mastery Academy</h1>
-            <p>Director Entrance | High-Stakes Clinical Training</p>
+            <p>Director Entrance | High-Stakes Training</p>
             <input type="text" id="student-name" placeholder="Student Name" value="Tash Robinson">
-            <button class="btn-gold" onclick="unlockPortal()">INITIALIZE STUDENT PORTAL</button>
+            <button class="btn-gold" onclick="unlockPortal()">INITIALIZE PORTAL</button>
+            <p class="disclaimer-mini">For Simulation Purposes Only</p>
         </div>
     </div>
 
@@ -29,7 +30,7 @@
                     <option value="es-ES">🇪🇸 Español</option>
                     <option value="fr-FR">🇫🇷 Français</option>
                 </select>
-                <button class="tag-gold" onclick="togglePreMed()">🔓 UNLOCK PRE-MED VAULT ($)</button>
+                <button class="tag-gold" onclick="togglePreMed()">🔓 UNLOCK PRE-MED VAULT</button>
             </div>
         </header>
 
@@ -43,18 +44,18 @@
                 </div>
 
                 <div class="calc-box">
-                    <h4>Dosage Calculator</h4>
+                    <h4>Dosage Math Engine</h4>
                     <input type="number" id="dose-order" placeholder="Ordered (mg)">
                     <input type="number" id="dose-hand" placeholder="On Hand (mg)">
-                    <button onclick="calculateDose()">Calc Volume</button>
+                    <button onclick="calculateDose()">Calculate mL</button>
                     <p id="calc-result">Result: --</p>
                 </div>
 
                 <nav>
                     <button onclick="loadModule('vitals')" class="nav-btn active">1. Triage Mastery</button>
-                    <button onclick="loadModule('diabetic')" class="nav-btn">2. Diabetic/Dietary</button>
-                    <button onclick="loadModule('video')" class="nav-btn">🎬 Video Library (Add-on)</button>
-                    <button id="exam-btn" onclick="loadModule('exam')" class="nav-btn locked">🎓 Final Certification</button>
+                    <button onclick="loadModule('diabetic')" class="nav-btn">2. Endocrine/Dietary</button>
+                    <button onclick="loadModule('video')" class="nav-btn">🎬 Video Simulation</button>
+                    <button id="exam-btn" onclick="loadModule('exam')" class="nav-btn locked">🎓 Certification</button>
                 </nav>
             </aside>
 
@@ -63,37 +64,43 @@
                     <h1>Module 1: Vital Signs Triage</h1>
                     
                     <div class="sim-box">
-                        <p><strong>Scenario:</strong> BP 88/44, HR 128, O2 89%. Priority?</p>
-                        <button class="btn-red" onclick="answer('correct')">RED: Emergency Alert</button>
-                        <button class="btn-outline" onclick="answer('wrong')">GREEN: Monitor</button>
+                        <p><strong>Scenario:</strong> BP 88/44, HR 128, O2 89%. Clinical status?</p>
+                        <button class="btn-red" onclick="answer('correct')">RED: Critical Alert</button>
+                        <button class="btn-outline" onclick="answer('wrong')">GREEN: Routine Care</button>
                     </div>
                 </div>
 
                 <div id="mod-diabetic" class="content-card hidden">
-                    <h1>Module 2: Diabetic & Dietary Logic</h1>
+                    <h1>Module 2: Diabetic Management</h1>
                     
                     <div class="sim-box">
-                        <p><strong>Scenario:</strong> Glucose is 55 mg/dL. Patient is shaky.</p>
+                        <p><strong>Scenario:</strong> Glucose 55 mg/dL. Action?</p>
                         <button class="btn-gold" onclick="checkGlucose(55)">Apply 15-15 Rule</button>
                     </div>
                 </div>
 
                 <div id="mod-video" class="content-card hidden">
-                    <h1>🎬 Elite Clinical Video Library</h1>
+                    <h1>🎬 Video Simulation</h1>
                     <div class="video-placeholder">
-                        <p>Video content is currently being processed by the Director.</p>
-                        <div class="video-wrapper">
-                             <img src="https://via.placeholder.com/800x450?text=Video+Coming+Soon" style="width:100%; border-radius:15px;">
-                        </div>
+                        <img src="https://via.placeholder.com/800x450?text=AI+Clinical+Simulation+Coming+Soon" style="width:100%; border-radius:15px;">
                     </div>
                 </div>
                 
                 <div id="mod-exam" class="content-card hidden">
-                    <h1>Final Certification</h1>
-                    <button class="btn-gold" onclick="alert('Exam Started...')">Begin Assessment</button>
+                    <h1>🎓 Final Certification</h1>
+                    <div id="exam-engine">
+                        <p id="exam-status">Pass all modules to unlock.</p>
+                        <div id="cert-action" class="hidden">
+                            <button class="btn-gold" onclick="sendCertification()">EMAIL DIRECTOR FOR GRADUATION</button>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
+
+        <footer>
+            <p><strong>Medical Disclaimer:</strong> This platform is a clinical simulation tool for education. It does not provide medical advice or state licensure. Always verify with facility protocols.</p>
+        </footer>
     </div>
     <script src="main.js"></script>
 </body>

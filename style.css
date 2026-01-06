@@ -1,20 +1,31 @@
 :root { --navy: #0f172a; --gold: #c5a059; --stable: #10b981; --emergency: #ef4444; }
 body { margin: 0; font-family: 'Inter', sans-serif; background: #f8fafc; color: var(--navy); }
-.hidden { display: none; }
-#login-gate { position: fixed; inset: 0; background: var(--navy); display: flex; align-items: center; justify-content: center; z-index: 2000; }
-.glass-card { background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; text-align: center; color: white; border: 1px solid var(--gold); backdrop-filter: blur(10px); }
-.faculty-bar { background: var(--navy); color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
-.layout { display: grid; grid-template-columns: 320px 1fr; gap: 30px; padding: 30px; }
-.student-card { background: white; padding: 25px; border-radius: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-.tash-img { width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 10px; background: #cbd5e1; border: 3px solid var(--stable); }
-.calc-box { background: var(--navy); color: white; padding: 20px; border-radius: 15px; margin-top: 15px; font-size: 0.85rem; }
-.calc-box input { width: 100%; margin: 5px 0; padding: 8px; border-radius: 5px; border: none; }
-.calc-box button { width: 100%; background: var(--gold); border: none; padding: 10px; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; margin-top: 5px; }
+
+/* GATE STYLES */
+#login-gate { position: fixed; inset: 0; background: var(--navy); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+.glass-card { background: rgba(255,255,255,0.08); padding: 50px; border-radius: 24px; text-align: center; border: 1px solid var(--gold); backdrop-filter: blur(15px); color: white; }
+.btn-gold-large { background: var(--gold); color: white; border: none; padding: 20px 40px; border-radius: 12px; cursor: pointer; font-weight: 900; font-size: 1.1rem; width: 100%; margin-top: 20px; }
+
+/* PORTAL STYLES */
+.faculty-bar { background: var(--navy); color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
+.layout { display: flex; padding: 25px; gap: 25px; }
+aside { width: 320px; flex-shrink: 0; }
+main { flex-grow: 1; }
+
+.content-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); min-height: 500px; }
+.sim-box { background: #f1f5f9; padding: 30px; border-radius: 15px; border-left: 8px solid var(--gold); }
+.btn-group { display: flex; gap: 15px; margin-top: 20px; }
+
+/* BUTTONS */
+.nav-btn { width: 100%; padding: 18px; margin-bottom: 10px; border: none; border-radius: 12px; cursor: pointer; text-align: left; font-weight: bold; background: white; transition: 0.3s; }
+.nav-btn.active { background: var(--navy) !important; color: white !important; }
+.btn-red { background: var(--emergency); color: white; border: none; padding: 15px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; flex: 1; }
+.btn-outline { border: 2px solid var(--navy); padding: 15px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; flex: 1; }
+.btn-gold { background: var(--gold); color: white; border: none; padding: 15px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; }
+
+.calc-box { background: var(--navy); color: white; padding: 20px; border-radius: 15px; margin-top: 20px; }
+.calc-box input { width: 85%; margin-bottom: 5px; padding: 8px; border-radius: 5px; border: none; }
+.progress-container { background: #e2e8f0; height: 10px; border-radius: 5px; margin: 15px 0; overflow: hidden; }
 #progress-bar { background: var(--stable); height: 100%; width: 0%; transition: 0.8s; }
-.content-card { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); min-height: 600px; }
-.nav-btn { width: 100%; padding: 15px; margin-bottom: 8px; border: none; border-radius: 10px; cursor: pointer; text-align: left; font-weight: bold; background: white; color: #64748b; }
-.nav-btn.active { background: var(--navy); color: white; }
-.nav-btn.locked { opacity: 0.4; cursor: not-allowed; }
-.btn-gold { background: var(--gold); color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; font-weight: bold; }
-.btn-red { background: var(--emergency); color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; }
-footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #94a3b8; }
+.locked { opacity: 0.3; cursor: not-allowed; }
+.hidden { display: none !important; }

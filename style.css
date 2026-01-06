@@ -1,34 +1,6 @@
-:root { --navy: #0f172a; --gold: #c5a059; --stable: #10b981; --emergency: #ef4444; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: 'Inter', sans-serif; background: #f8fafc; color: var(--navy); overflow-x: hidden; }
-
-#login-gate { position: fixed; inset: 0; background: var(--navy); display: flex; align-items: center; justify-content: center; z-index: 2000; padding: 20px; }
-.glass-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; border: 2px solid var(--gold); width: 100%; max-width: 400px; }
-#login-gate input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: none; }
-.btn-gold-large { background: var(--gold); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; width: 100%; cursor: pointer; }
-
-#main-portal { display: none; width: 100%; }
-.faculty-bar { background: var(--navy); color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); }
-.layout { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; }
-
-aside { flex: 1; min-width: 280px; }
-main { flex: 2; min-width: 320px; }
-
-.student-card, .calc-box, .content-card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; }
-.calc-box { background: var(--navy); color: white; }
-.calc-row { display: flex; gap: 5px; margin-bottom: 8px; }
-.calc-row input { width: 50%; padding: 8px; border-radius: 5px; border: none; }
-.calc-btn { background: var(--gold); color: white; border: none; width: 100%; padding: 10px; border-radius: 5px; cursor: pointer; }
-
-.progress-container { background: #e2e8f0; height: 10px; border-radius: 5px; overflow: hidden; }
-#progress-bar { background: var(--stable); height: 100%; width: 0%; transition: 0.5s; }
-
-.nav-btn { width: 100%; padding: 12px; margin-bottom: 5px; border: none; border-radius: 8px; text-align: left; font-weight: bold; background: white; cursor: pointer; border: 1px solid #eee; }
-.nav-btn.active { background: var(--navy) !important; color: white !important; }
-.locked { opacity: 0.4; cursor: not-allowed; }
-
-.sim-box { background: #f1f5f9; padding: 20px; border-radius: 12px; border-left: 5px solid var(--gold); }
-.btn-group { display: flex; gap: 10px; margin-top: 15px; }
-.btn-red { background: var(--emergency); color: white; border: none; padding: 12px; border-radius: 8px; flex: 1; font-weight: bold; }
-.btn-outline { border: 2px solid var(--navy); flex: 1; padding: 12px; border-radius: 8px; font-weight: bold; background: transparent; }
-.btn-gold { background: var(--gold); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+/* Add this to your existing CSS or replace it */
+.gold-text { color: var(--gold); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+.lesson-text { background: #fff; padding: 15px; border-radius: 10px; margin: 20px 0; border: 1px solid #e2e8f0; line-height: 1.6; }
+.lesson-text ul, .lesson-text ol { padding-left: 20px; }
+.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+.v-thumb { background: #334155; color: white; height: 150px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; border: 2px solid var(--gold); cursor: pointer; }

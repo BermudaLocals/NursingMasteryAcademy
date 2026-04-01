@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Education - MedTrack Pro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/dashboard.html" class="logo">Med<span>Track</span> Pro</a>
+        <button class="hamburger" aria-label="Menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/pets.html">🐾 Pets</a></li>
+            <li><a href="/baby.html">👶 Baby</a></li>
+            <li><a href="/nursing.html" class="active">🏥 Nursing</a></li>
+        </ul>
+        <div class="user-menu">
+            <span class="user-name" id="userName"></span>
+            <a href="#" id="logoutBtn" class="btn btn-sm btn-secondary">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard container">
+        <div class="dashboard-header">
+            <h1 class="gold-text">Nursing Education</h1>
+            <p>Triage training, dosage calculator, and clinical practice scenarios</p>
+        </div>
+
+        <div class="module-grid">
+            <div class="card module-card" onclick="setTab('triage')">
+                <span class="module-icon">🚑</span>
+                <div class="module-title">Triage Simulator</div>
+                <div class="module-desc">Practice patient prioritization scenarios and learn triage decision-making</div>
+                <button class="btn btn-primary mt-3">Start Training</button>
+            </div>
+            <div class="card module-card" onclick="setTab('calculator')">
+                <span class="module-icon">🧮</span>
+                <div class="module-title">Dosage Calculator</div>
+                <div class="module-desc">Quick medication dosage calculations with pediatric and adult formulas</div>
+                <button class="btn btn-primary mt-3">Open Calculator</button>
+            </div>
+            <div class="card module-card" onclick="setTab('reference')">
+                <span class="module-icon">📚</span>
+                <div class="module-title">Quick Reference</div>
+                <div class="module-desc">Essential mnemonics, vital signs ranges, and clinical assessment guides</div>
+                <button class="btn btn-primary mt-3">View Reference</button>
+            </div>
+        </div>
+
+        <div style="margin-top:32px" id="toolArea">
+            <div class="card">
+                <h3 style="margin-bottom:24px">👋 Welcome to Nurse Training</h3>
+                <p style="color:var(--text-secondary)">Select a module above to begin. Progress through triage scenarios to master patient prioritization, use the dosage calculator for quick medication math, and keep essential reference material at your fingertips.</p>
+                <div class="score-display mt-3">
+                    <div class="score-item"><div class="score-number" id="triScore">0</div><div class="score-label">Triage Score</div></div>
+                    <div class="score-item"><div class="score-number" id="triAttempted">0</div><div class="score-label">Attempted</div></div>
+                    <div class="score-item"><div class="score-number" id="triAccuracy">0%</div><div class="score-label">Accuracy</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/nursing.js"></script>
+</body>
+</html>

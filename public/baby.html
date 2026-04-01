@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Health Tracker - MedTrack Pro</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/dashboard.html" class="logo">Med<span>Track</span> Pro</a>
+        <button class="hamburger" aria-label="Menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/pets.html">🐾 Pets</a></li>
+            <li><a href="/baby.html" class="active">👶 Baby</a></li>
+            <li><a href="/nursing.html">🏥 Nursing</a></li>
+        </ul>
+        <div class="user-menu">
+            <span class="user-name" id="userName"></span>
+            <a href="#" id="logoutBtn" class="btn btn-sm btn-secondary">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard container">
+        <div class="dashboard-header">
+            <h1 class="gold-text">Baby Health Tracker</h1>
+            <p>Monitor your baby's growth, feeding, sleep, and milestones</p>
+        </div>
+
+        <div class="selector-bar no-print">
+            <div class="form-group" style="margin:0;flex:1;max-width:300px">
+                <select class="form-control" id="babySelect"><option value="">Select a baby...</option></select>
+            </div>
+            <button class="btn btn-primary" onclick="showAddBabyModal()">+ Add Baby</button>
+        </div>
+
+        <div id="babyProfile" class="hidden">
+            <div class="card mb-3">
+                <div class="profile-card">
+                    <div class="profile-avatar" id="babyAvatar">👶</div>
+                    <div class="profile-info">
+                        <div class="profile-name" id="babyName"></div>
+                        <div class="profile-details" id="babyDetails"></div>
+                        <div class="profile-actions">
+                            <button class="btn btn-sm btn-secondary" onclick="showEditBabyModal()">Edit</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteBaby()">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs no-print">
+                <div class="tab active" data-tab="growth">📏 Growth</div>
+                <div class="tab" data-tab="feeding">🍼 Feeding</div>
+                <div class="tab" data-tab="sleep">😴 Sleep</div>
+                <div class="tab" data-tab="diaper">🧷 Diapers</div>
+                <div class="tab" data-tab="milestones">🎯 Milestones</div>
+                <div class="tab" data-tab="vaccinations">💉 Vaccines</div>
+                <div class="tab" data-tab="temp">🌡️ Temperature</div>
+                <div class="tab" data-tab="report">📋 Doctor Report</div>
+            </div>
+
+            <div class="tab-content active" id="tab-growth">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm('growthFormContainer')"><span class="card-title">+ Log Growth Measurement</span><span>▼</span></div>
+                    <div class="card-body hidden" id="growthFormContainer">
+                        <div class="form-row"><div class="form-group"><label class="form-label">Date</label><input type="date" class="form-control" id="growthDate"></div><div class="form-group"><label class="form-label">Height (cm)</label><input type="number" class="form-control" id="growthHeight" step="0.1" placeholder="60"></div></div>
+                        <div class="form-row"><div class="form-group"><label class="form-label">Weight (kg)</label><input type="number" class="form-control" id="growthWeight" step="0.01" placeholder="6.5"></div><div class="form-group"><label class="form-label">Head Circumference (cm)</label><input type="number" class="form-control" id="growthHead" step="0.1" placeholder="40"></div></div>
+                        <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="growthNotes" rows="2"></textarea></div>
+                        <button class="btn btn-primary" onclick="saveGrowth()">Save Measurement</button>
+                    </div>
+                </div>
+                <div id="growthData"><div class="loading"><div class="spinner"></div></div></div>
+                <div class="grid-2">
+                    <div class="chart-container" style="height:280px"><canvas id="weightChart"></canvas></div>
+                    <div class="chart-container" style="height:280px"><canvas id="heightChart"></canvas></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-feeding">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm('feedFormContainer')"><span class="card-title">+ Log Feeding</span><span>▼</span></div>
+                    <div class="card-body hidden" id="feedFormContainer">
+                        <div class="form-row"><div class="form-group"><label class="form-label">Date & Time</label><input type="datetime-local" class="form-control" id="feedDateTime"></div><div class="form-group"><label class="form-label">Type</label><select class="form-control" id="feedType"><option>Breast (Left)</option><option>Breast (Right)</option><option>Breast (Both)</option><option>Formula</option><option>Bottle - Breastmilk</option><option>Solids</option><option>Water</option></select></div></div>
+                        <div class="form-row"><div class="form-group"><label class="form-label">Amount (ml)</label><input type="number" class="form-control" id="feedAmount" placeholder="120"></div><div class="form-group"><label class="form-label">Duration (min)</label><input type="number" class="form-control" id="feedDuration" placeholder="20"></div></div>
+                        <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="feedNotes" rows="2"></textarea></div>
+                        <button class="btn btn-primary" onclick="saveFeeding()">Save Feeding</button>
+                    </div>
+                </div>
+                <div id="feedData"><div class="loading"><div class="spinner"></div></div></div>
+                <div class="chart-container" style="height:300px"><canvas id="feedChart"></canvas></div>
+            </div>
+
+            <div class="tab-content" id="tab-sleep">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm('sleepFormContainer')"><span class="card-title">+ Log Sleep</span><span>▼</span></div>
+                    <div class="card-body hidden" id="sleepFormContainer">
+                        <div class="form-row"><div class="form-group"><label class="form-label">Sleep Start</label><input type="datetime-local" class="form-control" id="sleepStart"></div><div class="form-group"><label class="form-label">Sleep End</label><input type="datetime-local" class="form-control" id="sleepEnd"></div></div>
+                        <div class="form-group"><label class="form-label">Type</label><select class="form-control" id="sleepType"><option value="nap">Nap</option><option value="night">Night Sleep</option></select></div>
+                        <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="sleepNotes" rows="2"></textarea></div>
+                        <button class="btn btn-primary" onclick="saveSleep()">Save Sleep Entry</button>
+                    </div>
+                </div>
+                <div id="sleepData"><div class="loading"><div class="spinner"></div></div></div>
+                <div class="chart-container" style="height:300px"><canvas id="sleepChart"></canvas></div>
+            </div>
+
+            <div class="tab-content" id="tab-diaper">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm('diaperFormContainer')"><span class="card-title">+ Log Diaper Change</span><span>▼</span></div>
+                    <div class="card-body hidden" id="diaperFormContainer">
+                        <div class="form-row"><div class="form-group"><label class="form-label">Date & Time</label><input type="datetime-local" class="form-control" id="diaperDateTime"></div><div class="form-group"><label class="form-label">Type</label><select class="form-control" id="diaperType"><option value="wet">Wet</option><option value="dirty">Dirty</option><option value="both">Both</option></select></div></div>
+                        <div class="form-group"><label class="form-label">Consistency (if dirty)</label><select class="form-control" id="diaperCons"><option value="">Select...</option><option>Soft/Normal</option><option>Hard</option><option>Loose</option><option>Watery</option></select></div>
+                        <div class="form-group"><label class="form-label">Color</label><select class="form-control" id="diaperColor"><option value="">Select...</option><option>Yellow/Brown</option><option>Green</option><option>Black/Tarry</option><option>Red</option><option>White</option></select></div>
+                        <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="diaperNotes" rows="2"></textarea></div>
+                        <button class="btn btn-primary" onclick="saveDiaper()">Save Diaper Entry</button>
+                    </div>
+                </div>
+                <div id="diaperData"><div class="loading"><div class="spinner"></div></div></div>
+                <div class="chart-container" style="height:300px"><canvas id="diaperChart"></canvas></div>
+            </div>
+
+            <div class="tab-content" id="tab-milestones">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm('milestoneFormContainer')"><span class="card-title">+ Record Milestone</span><span>▼</span></div>
+                    <div class="card-body hidden" id="milestoneFormContainer">
+                        <div class="form-row"><div class="form-group"><label class="form-label">Milestone</label><input type="text" class="form-control" id="msName" placeholder="e.g. First Steps" required></div><div class="form-group"><label class="form-label">Category</label><select class="form-control" id="msCategory"><option>Motor</option><option>Cognitive</option><option>Social</option><option>Language</option></select></div></div>
+                        <div class="form-group"><label class="form-label">Date Achieved</label><input type="date" class="form-control" id="msDate" required></div>
+                        <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="msNotes" rows="2"></textarea></div>
+                        <button class="btn btn-primary" onclick="saveMilestone()">Record Milestone</button>
+                    </div>
+                </div>
+                <div id="milestoneData"><div class="loading"><div class="spinner"></div></div></div>
+            </div>
+
+            <div class="tab-content" id="tab-vaccinations">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm("vaccineFormContainer")"><span class="card-title">+ Add Vaccination</span><span>▼</span></div>
+                    <div class="card-body hidden" id="vaccineFormContainer">
+                        <div class="form-group"><label class="form-label">Vaccine Name</label><input type="text" class="form-control" id="vacName" placeholder="e.g. DTaP" required></div>
+                        <div class="form-row"><div class="form-group"><label class="form-label">Scheduled Date</label><input type="date" class="form-control" id="vacScheduled"></div><div class="form-group"><label class="form-label">Administered Date</label><input type="date" class="form-control" id="vacGiven"></div></div>
+                        <div class="form-group"><label class="form-label">Reaction (if any)</label><input type="text" class="form-control" id="vacReaction" placeholder="None"></div>
+                        <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="vacNotes" rows="2"></textarea></div>
+                        <button class="btn btn-primary" onclick="saveVaccination()">Save Vaccination</button>
+                    </div>
+                </div>
+                <div id="vaccineData"><div class="loading"><div class="spinner"></div></div></div>
+            </div>
+
+            <div class="tab-content" id="tab-temp">
+                <div class="card form-card no-print">
+                    <div class="card-header" onclick="toggleForm('tempFormContainer')"><span class="card-title">+ Log Temperature/Illness</span><span>▼</span></div>
+                    <div class="card-body hidden" id="tempFormContainer">
+                        <div class="form-row"><div class="form-group"><label class="form-label">Date</label><input type="date" class="form-control" id="tempDate"></div><div class="form-group"><label class="form-label">Temperature (°F)</label><input type="number" class="form-control" id="tempValue" step="0.1" placeholder="98.6"></div></div>
+                        <div class="form-group"><label class="form-label">Illness Notes/Symptoms</label><textarea class="form-control" id="tempNotes" rows="3" placeholder="Fever, cough, rash..."></textarea></div>
+                        <button class="btn btn-primary" onclick="saveTemp()">Save Entry</button>
+                    </div>
+                </div>
+                <div id="tempData"><div class="loading"><div class="spinner"></div></div></div>
+                <div class="chart-container" style="height:300px"><canvas id="tempChart"></canvas></div>
+            </div>
+
+            <div class="tab-content" id="tab-report">
+                <div class="card no-print mb-3">
+                    <div class="flex-between">
+                        <div class="flex-gap"><label class="form-label" style="margin:0">Report Period:</label><select class="form-control" id="reportDays" style="width:auto"><option value="7">Last 7 days</option><option value="14">Last 14 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select></div>
+                        <div class="btn-group"><button class="btn btn-primary" onclick="generateReport()">Generate Report</button><button class="btn btn-secondary" onclick="window.print()">🖨️ Print</button></div>
+                    </div>
+                </div>
+                <div id="reportContent"><div class="empty-state"><div class="empty-icon">📋</div><p>Click 'Generate Report' to create a pediatrician visit summary</p></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="babyModal">
+        <div class="modal">
+            <div class="modal-header"><h2 id="babyModalTitle">Add Baby</h2><button class="modal-close" onclick="hideModal('babyModal')">&times;</button></div>
+            <div class="form-group"><label class="form-label">Name *</label><input type="text" class="form-control" id="bmName" required></div>
+            <div class="form-row"><div class="form-group"><label class="form-label">Birth Date</label><input type="date" class="form-control" id="bmBirth"></div><div class="form-group"><label class="form-label">Gender</label><select class="form-control" id="bmGender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div></div>
+            <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" id="bmNotes" rows="2"></textarea></div>
+            <div class="modal-footer"><button class="btn btn-secondary" onclick="hideModal('babyModal')">Cancel</button><button class="btn btn-primary" onclick="saveBaby()">Save Baby</button></div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/baby.js"></script>
+</body>
+</html>

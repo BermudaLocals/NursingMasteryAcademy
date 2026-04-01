@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack Pro - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MedTrack Pro</div>
+        <div class="nav-links">
+            <a href="/dashboard.html" class="active">Dashboard</a>
+            <a href="/pets.html">Pet Tracking</a>
+            <a href="/baby.html">Baby Tracker</a>
+            <a href="/nursing.html">Nursing</a>
+        </div>
+        <div class="nav-user">
+            <span id="user-name">User</span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <h1>Welcome to MedTrack Pro</h1>
+        
+        <div class="module-grid">
+            <div class="module-card">
+                <h3>🐾 Pet Diagnostics</h3>
+                <p>Track stool quality, eating patterns, vital signs, and generate vet reports for your pets.</p>
+                <a href="/pets.html" class="btn-primary">Open Pet Tracking</a>
+            </div>
+            
+            <div class="module-card">
+                <h3>👶 Baby Health Tracker</h3>
+                <p>Monitor growth, feeding, sleep, milestones, and vaccinations from newborn to preschool.</p>
+                <a href="/baby.html" class="btn-primary">Open Baby Tracker</a>
+            </div>
+            
+            <div class="module-card">
+                <h3>🏥 Nursing Education</h3>
+                <p>Dosage calculator, triage simulator, and clinical reference tools.</p>
+                <a href="/nursing.html" class="btn-primary">Open Nursing</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

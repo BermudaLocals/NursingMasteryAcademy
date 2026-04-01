@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Diagnostics - MedTrack Pro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MedTrack Pro</div>
+        <div class="nav-links">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/pets.html" class="active">Pet Tracking</a>
+            <a href="/baby.html">Baby Tracker</a>
+            <a href="/nursing.html">Nursing</a>
+        </div>
+        <div class="nav-user">
+            <span id="user-name">User</span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="pet-tracker">
+        <h1>🐾 Pet Diagnostics</h1>
+        
+        <div class="pet-selector">
+            <label>Select Pet:</label>
+            <select id="pet-select">
+                <option value="">Choose a pet</option>
+            </select>
+            <button onclick="showAddPetModal()">Add New Pet</button>
+        </div>
+
+        <div id="pet-profile" class="hidden">
+            <div class="pet-header">
+                <h2 id="pet-name">Pet Name</h2>
+                <p id="pet-details">Species • Breed • Age</p>
+            </div>
+            
+            <div class="tracking-tabs">
+                <button class="tab-btn active" data-tab="stools">Stools</button>
+                <button class="tab-btn" data-tab="feeding">Feeding</button>
+                <button class="tab-btn" data-tab="vitals">Vitals</button>
+                <button class="tab-btn" data-tab="activity">Activity</button>
+            </div>
+            
+            <div id="tab-stools" class="tab-content active">
+                <h3>Stool Tracking</h3>
+                <form id="stool-form" class="tracking-form">
+                    <input type="date" id="stool-date" required>
+                    <select id="stool-consistency">
+                        <option value="normal">Normal</option>
+                        <option value="firm">Firm/Hard</option>
+                        <option value="soft">Soft</option>
+                        <option value="liquid">Liquid/Diarrhea</option>
+                    </select>
+                    <select id="stool-color">
+                        <option value="brown">Brown</option>
+                        <option value="black">Black/Tarry</option>
+                        <option value="red">Red/Bloody</option>
+                        <option value="yellow">Yellow/Mucous</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <label><input type="checkbox" id="stool-blood"> Blood visible</label>
+                    <label><input type="checkbox" id="stool-mucus"> Mucus present</label>
+                    <textarea id="stool-notes" placeholder="Additional notes"></textarea>
+                    <button type="submit" class="btn-primary">Record Stool</button>
+                </form>
+                <div id="stools-list" class="tracking-list"></div>
+            </div>
+            
+            <div id="tab-feeding" class="tab-content">
+                <h3>Feeding Tracking</h3>
+                <form id="feeding-form" class="tracking-form">
+                    <input type="datetime-local" id="meal-datetime" required>
+                    <input type="text" id="meal-food" placeholder="Food type" required>
+                    <input type="text" id="meal-portion" placeholder="Portion size" required>
+                    <select id="meal-appetite">
+                        <option value="5">Excellent (5)</option>
+                        <option value="4">Good (4)</option>
+                        <option value="3">Normal (3)</option>
+                        <option value="2">Picky (2)</option>
+                        <option value="1">Refused (1)</option>
+                    </select>
+                    <label><input type="checkbox" id="meal-vomit"> Vomited after</label>
+                    <textarea id="meal-notes" placeholder="Additional notes"></textarea>
+                    <button type="submit" class="btn-primary">Record Meal</button>
+                </form>
+                <div id="feeding-list" class="tracking-list"></div>
+            </div>
+            
+            <div id="tab-vitals" class="tab-content">
+                <h3>Vital Signs</h3>
+                <form id="vitals-form" class="tracking-form">
+                    <input type="date" id="vitals-date" required>
+                    <input type="number" id="vitals-temp" placeholder="Temperature (°F)" step="0.1">
+                    <input type="number" id="vitals-hr" placeholder="Heart Rate (bpm)">
+                    <input type="number" id="vitals-rr" placeholder="Respiratory Rate">
+                    <input type="number" id="vitals-weight" placeholder="Weight (lbs)" step="0.1">
+                    <textarea id="vitals-notes" placeholder="Additional notes"></textarea>
+                    <button type="submit" class="btn-primary">Record Vitals</button>
+                </form>
+                <canvas id="vitals-chart"></canvas>
+                <div id="vitals-list" class="tracking-list"></div>
+            </div>
+            
+            <div id="tab-activity" class="tab-content">
+                <h3>Activity & Hydration</h3>
+                <form id="activity-form" class="tracking-form">
+                    <input type="date" id="activity-date" required>
+                    <select id="activity-energy">
+                        <option value="5">Very Energetic (5)</option>
+                        <option value="4">Energetic (4)</option>
+                        <option value="3">Normal (3)</option>
+                        <option value="2">Lethargic (2)</option>
+                        <option value="1">Very Lethargic (1)</option>
+                    </select>
+                    <input type="text" id="activity-water" placeholder="Water intake (cups)">
+                    <input type="number" id="activity-urination" placeholder="Urination frequency (times/day)">
+                    <select id="activity-urine-color">
+                        <option value="normal">Normal Yellow</option>
+                        <option value="dark">Dark/Amber</option>
+                        <option value="clear">Clear</option>
+                        <option value="bloody">Bloody</option>
+                    </select>
+                    <textarea id="activity-notes" placeholder="Additional notes"></textarea>
+                    <button type="submit" class="btn-primary">Record Activity</button>
+                </form>
+                <div id="activity-list" class="tracking-list"></div>
+            </div>
+            
+            <div class="report-section">
+                <button onclick="generateVetReport()" class="btn-secondary">Generate Vet Report</button>
+                <div id="report-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/pets.js"></script>
+</body>
+</html>

@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursing Education - MedTrack Pro</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Nursing Education - MedTrack Pro | Nursing Mastery Academy</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      .disclaimer{font-size:11px;background:#FFF3CD;border:1px solid #FFD77A;padding:10px;border-radius:8px;margin:12px 0}
+      .result.success{color:#0A7A2F;font-weight:700}.result.error{color:#B42318;font-weight:700}
+      .vitals-display{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0;font-size:12px}
+      .vitals-display span{background:#F8F9FB;padding:6px 10px;border-radius:999px;border:1px solid #E5E7EB}
+      .triage-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+      .triage-btn{padding:10px;border-radius:8px;border:1px solid #D1D5DB;background:#fff;cursor:pointer;font-weight:600}
+      .feedback-card.correct{border-left:4px solid #0A7A2F}.feedback-card.incorrect{border-left:4px solid #B42318}
+    </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="/dashboard.html" class="logo">Med<span>Track</span> Pro</a>
+        <a href="./dashboard.html" class="logo">Med<span>Track</span> Pro</a>
         <button class="hamburger" aria-label="Menu">☰</button>
         <ul class="nav-links">
-            <li><a href="/dashboard.html">Dashboard</a></li>
-            <li><a href="/pets.html">🐾 Pets</a></li>
-            <li><a href="/baby.html">👶 Baby</a></li>
-            <li><a href="/nursing.html" class="active">🏥 Nursing</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./pets.html">🐾 Pets</a></li>
+            <li><a href="./baby.html">👶 Baby</a></li>
+            <li><a href="./nursing.html" class="active">🏥 Nursing</a></li>
         </ul>
         <div class="user-menu">
             <span class="user-name" id="userName"></span>
@@ -26,22 +35,23 @@
         <div class="dashboard-header">
             <h1 class="gold-text">Nursing Education</h1>
             <p>Triage training, dosage calculator, and clinical practice scenarios</p>
+            <div class="disclaimer"><strong>Educational Demonstration Only:</strong> Supplemental simulation training. Not affiliated with NCSBN. Not for clinical use. Certificate is Certificate of Completion - Simulation Training, Non-accredited. Always verify with official references.</div>
         </div>
 
         <div class="module-grid">
-            <div class="card module-card" onclick="setTab('triage')">
+            <div class="card module-card" data-tab="triage">
                 <span class="module-icon">🚑</span>
                 <div class="module-title">Triage Simulator</div>
                 <div class="module-desc">Practice patient prioritization scenarios and learn triage decision-making</div>
                 <button class="btn btn-primary mt-3">Start Training</button>
             </div>
-            <div class="card module-card" onclick="setTab('calculator')">
+            <div class="card module-card" data-tab="calculator">
                 <span class="module-icon">🧮</span>
                 <div class="module-title">Dosage Calculator</div>
                 <div class="module-desc">Quick medication dosage calculations with pediatric and adult formulas</div>
                 <button class="btn btn-primary mt-3">Open Calculator</button>
             </div>
-            <div class="card module-card" onclick="setTab('reference')">
+            <div class="card module-card" data-tab="reference">
                 <span class="module-icon">📚</span>
                 <div class="module-title">Quick Reference</div>
                 <div class="module-desc">Essential mnemonics, vital signs ranges, and clinical assessment guides</div>
@@ -50,7 +60,8 @@
         </div>
 
         <div style="margin-top:32px" id="toolArea">
-            <div class="card">
+            <!-- Default Welcome -->
+            <div class="card" id="welcome-card">
                 <h3 style="margin-bottom:24px">👋 Welcome to Nurse Training</h3>
                 <p style="color:var(--text-secondary)">Select a module above to begin. Progress through triage scenarios to master patient prioritization, use the dosage calculator for quick medication math, and keep essential reference material at your fingertips.</p>
                 <div class="score-display mt-3">
@@ -59,10 +70,55 @@
                     <div class="score-item"><div class="score-number" id="triAccuracy">0%</div><div class="score-label">Accuracy</div></div>
                 </div>
             </div>
+
+            <!-- Triage Tab -->
+            <div class="card" id="tab-triage" style="display:none">
+                <h3>🚑 Triage Simulator</h3>
+                <p style="font-size:12px;opacity:.7">NCSBN CJMM: Recognize Cues → Analyze → Prioritize → Generate Solutions → Take Action → Evaluate</p>
+                <button class="btn btn-primary" id="start-triage">Start Simulation</button>
+                <div id="triage-sim" style="margin-top:20px"></div>
+            </div>
+
+            <!-- Calculator Tab -->
+            <div class="card" id="tab-calculator" style="display:none">
+                <h3>🧮 Dosage Calculator - Educational Only</h3>
+                <form id="dosage-form" style="display:grid;gap:12px;max-width:400px;margin-top:16px">
+                    <label>Prescribed Dose <input type="number" step="0.01" id="dose-prescribed" required></label>
+                    <label>Available Dose <input type="number" step="0.01" id="dose-available" required></label>
+                    <label>Volume <input type="number" step="0.01" id="dose-volume" required></label>
+                    <label>Type <select id="med-type"><option value="tablet">Tablet</option><option value="liquid">Liquid (mL)</option></select></label>
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </form>
+                <div id="dose-result" class="result" style="margin-top:12px"></div>
+                <div style="font-size:10px;opacity:.6;margin-top:8px">Formula: (Prescribed / Available) × Volume. Always double-check.</div>
+            </div>
+
+            <!-- Reference Tab -->
+            <div class="card" id="tab-reference" style="display:none">
+                <h3>📚 Quick Reference</h3>
+                <ul style="font-size:13px;line-height:1.6;margin-top:12px">
+                    <li><strong>Vital Signs:</strong> HR 60-100, BP 90-120/60-80, RR 12-20, SpO2 >95%</li>
+                    <li><strong>ABCDE:</strong> Airway, Breathing, Circulation, Disability, Exposure</li>
+                    <li><strong>SBAR:</strong> Situation, Background, Assessment, Recommendation</li>
+                    <li><strong>6 Rights:</strong> Patient, Drug, Dose, Route, Time, Documentation</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <script src="/js/app.js"></script>
-    <script src="/js/nursing.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/nursing.js"></script>
+    <script>
+      // CSP-safe tab switching - replaces your onclick=
+      document.querySelectorAll('.module-card').forEach(card=>{
+        card.addEventListener('click', ()=>{
+          const tab = card.getAttribute('data-tab');
+          document.querySelectorAll('[id^="tab-"], #welcome-card').forEach(el=> el.style.display='none');
+          const target = document.getElementById('tab-'+tab);
+          if(target) target.style.display='block';
+          if(tab==='triage' && window.initTriageSim) window.scrollTo({top: document.getElementById('toolArea').offsetTop, behavior:'smooth'});
+        });
+      });
+    </script>
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Med-Safety Loop - NMA</title>
+<style>
+:root{--navy:#0A1931;--gold:#C5A880;--red:#DC2626;--green:#16A34A;--bg:#F8FAFC}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,sans-serif}
+body{background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:white;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+.badge{padding:4px 10px;border-radius:20px;font-weight:800;font-size:11px}
+.red{background:var(--red);color:white}.green{background:var(--green);color:white}
+.wrap{max-width:1000px;margin:0 auto;padding:20px}
+.card{background:white;border-radius:16px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.06);border:1px solid #E2E8F0;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.check{border:2px solid #E2E8F0;border-radius:12px;padding:12px;display:flex;gap:10px;align-items:start;margin:8px 0}
+.check input{width:20px;height:20px;margin-top:2px}
+.btn{padding:12px 16px;border-radius:10px;font-weight:800;border:none;cursor:pointer;width:100%;margin:6px 0}
+.btn-navy{background:var(--navy);color:white}.btn-gold{background:var(--gold);color:var(--navy)}.btn-red{background:var(--red);color:white}
+.btn-outline{background:white;border:2px solid var(--navy);color:var(--navy)}
+.small{font-size:11px;color:#64748B}
+.stop{border:3px solid var(--red);background:#FEF2F2;padding:16px;border-radius:12px;display:none}
+.ok{border:3px solid var(--green);background:#F0FDF4;padding:16px;border-radius:12px;display:none}
+</style>
+</head>
+<body>
+<header>
+<div><a href="./dashboard.html" style="color:var(--gold);text-decoration:none">← Dashboard</a> • <b>Med-Safety Loop</b> <span id="caseNum" class="badge" style="background:var(--gold);color:var(--navy)">CASE 1/6</span></div>
+<div id="xpBadge" class="badge green">0 XP</div>
+</header>
+
+<div class="wrap">
+<div class="card">
+<h2 id="pName">Loading...</h2>
+<p id="pInfo" class="small"></p>
+<div class="grid2" style="margin-top:12px">
+<div><b>Order:</b> <span id="order"></span></div>
+<div><b>Dose:</b> <span id="dose"></span> | <b>Route:</b> <span id="route"></span></div>
+<div><b>Time:</b> <span id="time"></span> | <b>Exp:</b> <span id="exp"></span></div>
+<div><b>Allergy:</b> <span id="allergy" style="font-weight:800"></span></div>
+</div>
+</div>
+
+<div class="card">
+<h3>5 Rights Verification - Check ALL before Administer</h3>
+<div class="check"><input type="checkbox" id="r1"><div><b>1. Right Patient</b><div class="small">2 identifiers, wristband matches MAR, DOB matches</div></div></div>
+<div class="check"><input type="checkbox" id="r2"><div><b>2. Right Drug</b><div class="small">Matches order exactly, no allergy, not expired</div></div></div>
+<div class="check"><input type="checkbox" id="r3"><div><b>3. Right Dose</b><div class="small">Calculation correct, weight-based if needed, within range</div></div></div>
+<div class="check"><input type="checkbox" id="r4"><div><b>4. Right Route</b><div class="small">PO vs IV vs SC - is this route safe for this drug?</div></div></div>
+<div class="check"><input type="checkbox" id="r5"><div><b>5. Right Time</b><div class="small">Not expired, not too early/late, correct frequency</div></div></div>
+<div class="check"><input type="checkbox" id="r6"><div><b>6. Right Documentation + Right to Refuse</b><div class="small">Educate patient, check vitals if required, document after</div></div></div>
+
+<div id="stopBox" class="stop"><h3>⛔ STOP - UNSAFE - DO NOT ADMINISTER</h3><p id="stopReason"></p></div>
+<div id="okBox" class="ok"><h3>✅ Safe to Administer - 5 Rights Met</h3><p id="okReason"></p></div>
+
+<div style="margin-top:16px" class="grid2">
+<button class="btn btn-navy" onclick="attemptAdminister()">Administer Medication</button>
+<button class="btn btn-red" onclick="attemptHold()">Hold + Notify Provider</button>
+</div>
+<div id="feedback" style="margin-top:12px;font-weight:700"></div>
+</div>
+
+<div class="card">
+<h3>Progress</h3>
+<div class="small">XP: <span id="xpText">0</span> | Cases: <span id="caseText">0/200</span></div>
+<button class="btn btn-gold" onclick="nextCase()">Next Medication →</button>
+<a href="./dashboard.html" class="btn btn-outline" style="display:block;text-align:center;text-decoration:none">Back to Dashboard</a>
+<p class="small" style="margin-top:8px">Synthetic MAR only. No PHI. Educational only.</p>
+</div>
+</div>
+
+<script>
+const meds=[
+{id:1,patient:"Mrs. Lee, 72F, DOB 05/12/1953",info:"HR 88, BP 132/78, Weight 68kg, NKDA",order:"Lisinopril 10mg PO daily for HTN",dose:"10mg",route:"PO",time:"0900 daily",exp:"2026-12 (Valid)",allergy:"NKDA - No Known Allergy",isSafe:true,error:"",rationale:"All 6 Rights met. NKDA, dose within range, expiration valid, vitals stable."},
+{id:2,patient:"Mr. Brown, 55M, DOB 11/03/1970",info:"HR 102, BP 98/60, Weight 80kg, Allergy: PENICILLIN",order:"Amoxicillin 500mg PO TID for infection",dose:"500mg",route:"PO",time:"0900",exp:"2026-08 (Valid)",allergy:"PENICILLIN - Rash, Anaphylaxis",isSafe:false,error:"ALLERGY ALERT: Patient allergic to Penicillin. Amoxicillin is penicillin class - DO NOT GIVE.",rationale:"Right Drug FAIL - allergy to penicillin class. Hold + notify provider for alternative."},
+{id:3,patient:"Baby Smith, 6mo, DOB 03/10/2026",info:"Weight 7kg, HR 130, Temp 100.4, NKDA",order:"Acetaminophen 105mg PO q6h PRN fever",dose:"105mg (15mg/kg)",route:"PO",time:"1400",exp:"2026-10 (Valid)",allergy:"NKDA",isSafe:true,error:"",rationale:"Weight-based: 7kg x 15mg = 105mg correct. Safe."},
+{id:4,patient:"Ms. Garcia, 45F, DOB 08/22/1980",info:"Weight 90kg, BP 110/70, NKDA",order:"Heparin 5000 units SC q8h",dose:"5000 units",route:"SC",time:"0900",exp:"2024-01 (EXPIRED - 1 year ago)",allergy:"NKDA",isSafe:false,error:"EXPIRED MED: Heparin expired 2024-01. Do not administer expired medication.",rationale:"Right Time FAIL - expired medication. Check expiration always."},
+{id:5,patient:"Mr. Wilson, 80F, DOB 02/14/1946",info:"Weight 60kg, Cr 2.1 (high), eGFR 28, NKDA",order:"Metformin 1000mg PO BID",dose:"1000mg",route:"PO",time:"0900",exp:"2026-11 (Valid)",allergy:"NKDA",isSafe:false,error:"RENAL DOSE: Metformin contraindicated when eGFR <30. Risk lactic acidosis. Hold + call provider.",rationale:"Right Dose FAIL - renal impairment, metformin contraindicated. Recognize cues: high creatinine + low eGFR."},
+{id:6,patient:"Ms. Patel, 30F, DOB 06/15/1995",info:"HR 58, BP 100/62, Weight 55kg, NKDA, on Warfarin",order:"Ibuprofen 400mg PO q6h PRN pain",dose:"400mg",route:"PO",time:"1000",exp:"2026-09 (Valid)",allergy:"NKDA",isSafe:false,error:"DRUG INTERACTION: Ibuprofen + Warfarin increases bleeding risk. HR 58 also bradycardic. Hold + clarify.",rationale:"Right Drug/Route interaction fail. NSAID + anticoagulant = bleeding. Need provider clarification."}
+];
+let current=parseInt(localStorage.getItem('nma_med_case')||'0');
+function render(){
+ const m=meds[current];
+ document.getElementById('caseNum').textContent=`CASE ${current+1}/${meds.length}`;
+ document.getElementById('pName').textContent=m.patient;
+ document.getElementById('pInfo').textContent=m.info;
+ document.getElementById('order').textContent=m.order;
+ document.getElementById('dose').textContent=m.dose;
+ document.getElementById('route').textContent=m.route;
+ document.getElementById('time').textContent=m.time;
+ document.getElementById('exp').textContent=m.exp;
+ document.getElementById('allergy').textContent=m.allergy;
+ document.getElementById('allergy').style.color=m.allergy.includes('PENICILLIN')||m.allergy.includes('ALLERGY')?'red':'green';
+ document.getElementById('feedback').textContent=''; document.getElementById('stopBox').style.display='none'; document.getElementById('okBox').style.display='none';
+ document.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=false);
+ const xp=localStorage.getItem('nma_xp')||0; document.getElementById('xpBadge').textContent=xp+' XP'; document.getElementById('xpText').textContent=xp; document.getElementById('caseText').textContent=(localStorage.getItem('nma_cases')||0)+'/200';
+}
+function allChecked(){return ['r1','r2','r3','r4','r5','r6'].every(id=>document.getElementById(id).checked);}
+function attemptAdminister(){
+ const m=meds[current]; const fb=document.getElementById('feedback');
+ if(!allChecked()){fb.style.color='red'; fb.textContent='✗ You must check ALL 6 Rights before administering.'; return;}
+ if(m.isSafe){fb.style.color='green'; fb.textContent='✓ CORRECT: Safe to give. '+m.rationale; document.getElementById('okBox').style.display='block'; document.getElementById('okReason').textContent=m.rationale; let xp=parseInt(localStorage.getItem('nma_xp')||'0')+15; let c=parseInt(localStorage.getItem('nma_cases')||'0')+1; localStorage.setItem('nma_xp',xp); localStorage.setItem('nma_cases',c); setTimeout(()=>{render();},1500);}
+ else {fb.style.color='red'; fb.textContent='⛔ UNSAFE! You tried to give an unsafe med. '+m.error; document.getElementById('stopBox').style.display='block'; document.getElementById('stopReason').textContent=m.error+' | '+m.rationale;}
+}
+function attemptHold(){
+ const m=meds[current]; const fb=document.getElementById('feedback');
+ if(!m.isSafe){fb.style.color='green'; fb.textContent='✓ CORRECT: You held unsafe med. '+m.error+' '+m.rationale; document.getElementById('stopBox').style.display='block'; document.getElementById('stopReason').textContent='CORRECT HOLD: '+m.error; let xp=parseInt(localStorage.getItem('nma_xp')||'0')+15; let c=parseInt(localStorage.getItem('nma_cases')||'0')+1; localStorage.setItem('nma_xp',xp); localStorage.setItem('nma_cases',c); setTimeout(()=>{render();},1500);}
+ else {fb.style.color='red'; fb.textContent='✗ This medication IS safe. You should have administered. '+m.rationale; document.getElementById('okBox').style.display='block'; document.getElementById('okReason').textContent=m.rationale;}
+}
+function nextCase(){current=(current+1)%meds.length; localStorage.setItem('nma_med_case',current); render(); window.scrollTo(0,0);}
+render();
+</script>
+</body>
+</html>

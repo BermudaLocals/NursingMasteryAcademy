@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triage Engine LIVE - NMA</title>
+<style>
+:root{--navy:#0A1931;--gold:#C5A880;--red:#DC2626;--yellow:#F59E0B;--green:#16A34A;--bg:#F8FAFC}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,sans-serif}
+body{background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:white;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+.badge{padding:4px 10px;border-radius:20px;font-weight:800;font-size:11px}
+.red{background:var(--red);color:white}.yellow{background:var(--yellow);color:black}.green{background:var(--green);color:white}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.grid2{display:grid;grid-template-columns:1.2fr.8fr;gap:16px}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.card{background:white;border-radius:16px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.06);border:1px solid #E2E8F0;margin-bottom:16px}
+.vitals{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.vital{border-radius:12px;padding:12px;text-align:center;border:2px solid}
+.vital b{font-size:20px;display:block}
+.btn{padding:12px 16px;border-radius:10px;font-weight:800;border:none;cursor:pointer;width:100%;margin:6px 0}
+.btn-navy{background:var(--navy);color:white}.btn-gold{background:var(--gold);color:var(--navy)}.btn-outline{background:white;border:2px solid var(--navy)}
+textarea{width:100%;border:2px solid #E2E8F0;border-radius:12px;padding:12px;font-size:14px}
+.small{font-size:11px;color:#64748B}
+</style>
+</head>
+<body>
+<header>
+<div><a href="./dashboard.html" style="color:var(--gold);text-decoration:none">← Dashboard</a> • <b>Triage Engine LIVE</b> <span id="caseNum" class="badge" style="background:var(--gold);color:var(--navy);margin-left:8px">CASE 1/6</span></div>
+<div id="xpBadge" class="badge green">0 XP</div>
+</header>
+<div class="wrap">
+<div class="grid2">
+<div>
+<div class="card">
+<div style="display:flex;justify-content:space-between"><h2 id="pName">Loading...</h2><span id="pZone" class="badge red">RED ZONE</span></div>
+<p id="pHist" class="small" style="margin:8px 0"></p>
+<div class="vitals" id="vitalsGrid"></div>
+<p id="pStem" style="font-weight:600;margin:10px 0"></p>
+</div>
+<div class="card">
+<h3>What do you do FIRST?</h3>
+<button class="btn btn-navy" onclick="checkAction('airway')">Airway - Position / Suction</button>
+<button class="btn btn-navy" onclick="checkAction('oxygen')">Breathing - O2 2-4L / Non-rebreather</button>
+<button class="btn btn-navy" onclick="checkAction('circulation')">Circulation - IV Fluids / Pressure</button>
+<button class="btn btn-gold" onclick="checkAction('call')">Call Provider STAT + Hold Med</button>
+<button class="btn btn-outline" onclick="checkAction('reassess')">Reassess in 15 min</button>
+<div id="actionFeedback" style="margin-top:12px;font-weight:700"></div>
+</div>
+</div>
+<div>
+<div class="card">
+<h3>AI Director - SBAR</h3>
+<p class="small">iOS fallback: Type SBAR. Voice works on Chrome.</p>
+<button class="btn btn-outline" onclick="startVoice()">🎤 Start Voice</button>
+<textarea id="sbar" rows="6" placeholder="S: Situation - 68M hypotension 88/54...
+B: Background - POD1 hip, heparin...
+A: Assessment - HR 112, SpO2 91%...
+R: Recommendation - Need provider now..."></textarea>
+<button class="btn btn-navy" onclick="checkSBAR()">Submit SBAR → Feedback</button>
+<div id="sbarFeedback" style="margin-top:10px" class="small"></div>
+</div>
+<div class="card">
+<h3>Progress</h3>
+<div class="small">XP: <span id="xpText">0</span> | Cases: <span id="caseText">0/200</span></div>
+<button class="btn btn-gold" onclick="nextCase()">Next Case →</button>
+<a href="./dashboard.html" class="btn btn-outline" style="display:block;text-align:center;text-decoration:none">Back to Dashboard</a>
+<p class="small" style="margin-top:8px">Synthetic patients only. No PHI.</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+const patients=[
+{id:1,name:"Mr. Alvarez, 68M Post-Op",hist:"POD1 Left Hip Replacement, on Heparin infusion, Hx HTN",vitals:{bp:"88/54",hr:112,spo2:91,temp:99.1,rr:24,pain:6},stem:"Reports dizziness, wound dressing saturated with bright red blood. Cold, clammy.",correct:"call",rationale:"Hypotension 88/54 + HR 112 + bleeding = RED circulation. Call provider STAT, hold heparin, pressure."},
+{id:2,name:"Ms. Chen, 24F Asthma",hist:"Hx asthma, non-compliant, recent URI",vitals:{bp:"122/78",hr:118,spo2:88,temp:99.8,rr:32,pain:2},stem:"Cannot complete sentences, wheezing, accessory muscles, SpO2 88% RA.",correct:"oxygen",rationale:"SpO2 88% + RR 32 = RED breathing. First: O2, sit upright, albuterol."},
+{id:3,name:"Mr. Jackson, 55M Chest Pain",hist:"HTN, high cholesterol, smoker",vitals:{bp:"182/104",hr:98,spo2:96,temp:98.6,rr:20,pain:9},stem:"Crushing chest pain 9/10 radiating to left arm, diaphoretic, 30 min.",correct:"call",rationale:"BP 182/104 + chest pain 9/10 = RED cardiac. Rapid Response, aspirin if ordered, EKG."},
+{id:4,name:"Ms. Davis, 82F UTI/Sepsis",hist:"Indwelling catheter, dementia, nursing home",vitals:{bp:"92/58",hr:108,spo2:93,temp:101.8,rr:26,pain:3},stem:"Confused from baseline, foul urine, temp 101.8, chills.",correct:"circulation",rationale:"Temp 101.8 + HR 108 + BP 92/58 + RR 26 = SIRS/sepsis RED. Fluids, cultures, notify."},
+{id:5,name:"Mr. Okafor, 34M DKA",hist:"Type 1 DM, missed insulin, polyuria x2 days",vitals:{bp:"100/62",hr:110,spo2:97,temp:98.9,rr:28,pain:4},stem:"Fruity breath, Kussmaul RR 28, glucose 480, lethargic.",correct:"call",rationale:"Glucose 480 + RR 28 Kussmaul = DKA RED. Call provider, fluids, insulin protocol."},
+{id:6,name:"Ms. Rivera, 45F Postpartum",hist:"G2P2, vaginal delivery 6h ago, Hx PPH",vitals:{bp:"86/50",hr:120,spo2:94,temp:99.5,rr:22,pain:7},stem:"Fundus boggy, heavy bleeding saturating pad in 15 min, pale.",correct:"circulation",rationale:"BP 86/50 + HR 120 + boggy fundus = OB RED hemorrhage. Fundal massage, oxytocin, fluids."}
+];
+let current=parseInt(localStorage.getItem('nma_current_case')||'0');
+function zoneClass(type,val){
+ if(type==='bp'){const s=parseInt(val.split('/')[0]); if(s<90||s>180) return 'red'; if(s<100||s>160) return 'yellow'; return 'green';}
+ if(type==='spo2'){if(val<92) return 'red'; if(val<95) return 'yellow'; return 'green';}
+ if(type==='hr'){if(val<50||val>110) return 'red'; if(val<60||val>100) return 'yellow'; return 'green';}
+ if(type==='temp'){if(val>101||val<95) return 'red'; if(val>99.5) return 'yellow'; return 'green';}
+ if(type==='rr'){if(val<12||val>24) return 'red'; if(val<14||val>22) return 'yellow'; return 'green';}
+ if(type==='pain'){if(val>=7) return 'red'; if(val>=4) return 'yellow'; return 'green';}
+ return 'green';
+}
+function render(){
+ const p=patients[current];
+ document.getElementById('pName').textContent=p.name;
+ document.getElementById('pHist').textContent=p.hist;
+ document.getElementById('pStem').textContent=p.stem;
+ document.getElementById('caseNum').textContent=`CASE ${current+1}/${patients.length}`;
+ const g=document.getElementById('vitalsGrid'); g.innerHTML='';
+ const vitals=[{k:'bp',l:'BP',v:p.vitals.bp},{k:'hr',l:'HR',v:p.vitals.hr},{k:'spo2',l:'SpO2',v:p.vitals.spo2+'%'},{k:'temp',l:'Temp',v:p.vitals.temp+'°F'},{k:'rr',l:'RR',v:p.vitals.rr},{k:'pain',l:'Pain',v:p.vitals.pain+'/10'}];
+ let redCount=0;
+ vitals.forEach(v=>{const z=zoneClass(v.k, typeof v.v==='string'?parseInt(v.v):v.v); if(z==='red') redCount++; const div=document.createElement('div'); div.className=`vital ${z}`; div.innerHTML=`<div style="font-size:10px;font-weight:800">${v.l}</div><b>${v.v}</b><div class="badge ${z}" style="font-size:9px;margin-top:4px">${z.toUpperCase()}</div>`; g.appendChild(div);});
+ document.getElementById('pZone').textContent=redCount>=2?'RED ZONE':redCount>=1?'YELLOW ZONE':'GREEN ZONE'; document.getElementById('pZone').className=`badge ${redCount>=2?'red':redCount>=1?'yellow':'green'}`;
+ document.getElementById('actionFeedback').textContent=''; document.getElementById('sbarFeedback').innerHTML='';
+ const xp=localStorage.getItem('nma_xp')||0; document.getElementById('xpBadge').textContent=xp+' XP'; document.getElementById('xpText').textContent=xp; document.getElementById('caseText').textContent=(localStorage.getItem('nma_cases')||0)+'/200';
+}
+function checkAction(act){
+ const p=patients[current];
+ const fb=document.getElementById('actionFeedback');
+ if(act===p.correct){fb.style.color='green'; fb.textContent='✓ CORRECT: '+p.rationale; let xp=parseInt(localStorage.getItem('nma_xp')||'0')+10; let c=parseInt(localStorage.getItem('nma_cases')||'0')+1; localStorage.setItem('nma_xp',xp); localStorage.setItem('nma_cases',c); render();} else {fb.style.color='red'; fb.textContent='✗ Try again. Hint: '+p.rationale;}
+}
+function checkSBAR(){
+ const txt=document.getElementById('sbar').value.toLowerCase();
+ const fb=document.getElementById('sbarFeedback');
+ let score=0; let msg='';
+ if(txt.length>10) score++;
+ if(txt.includes('88')||txt.includes('91')||txt.includes('hypot')){score++; msg+='✓ Cues included. ';}
+ if(txt.includes('provider')||txt.includes('need')){score++; msg+='✓ Recommendation. ';}
+ fb.innerHTML=msg+`<br><b>Score: ${score}/3</b> ${score>=2?'+5 XP':''}`;
+ if(score>=2){let xp=parseInt(localStorage.getItem('nma_xp')||'0')+5; localStorage.setItem('nma_xp',xp); render();}
+}
+function nextCase(){current=(current+1)%patients.length; localStorage.setItem('nma_current_case',current); render(); document.getElementById('sbar').value=''; window.scrollTo(0,0);}
+function startVoice(){
+ if(!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)){alert('Voice not supported - use text fallback'); return;}
+ const Rec=window.SpeechRecognition||window.webkitSpeechRecognition; const rec=new Rec(); rec.onresult=e=>{document.getElementById('sbar').value+=e.results[0][0].transcript;}; rec.start();
+}
+render();
+</script>
+</body>
+</html>

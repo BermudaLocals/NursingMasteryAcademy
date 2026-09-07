@@ -112,25 +112,11 @@ For educational purposes only. Not an accredited nursing program, not affiliated
 </div>
 </div>
 </footer>
-
-<!-- PAYPAL BERMUDA LIVE - PASTE YOUR CLIENT ID -->
 <script src="https://www.paypal.com/sdk/js?client-id=BAAtF1gLU1yVyBULL1dmdu76C4Ydfkkw7OIOrAjzQiQrKzpFGiBD90wheHdW_tZvQyj_Cm2KWLys4LCsG0&currency=USD"></script>
 <script>
-paypal.Buttons({
-  style:{layout:'vertical',color:'gold',shape:'pill',label:'pay'},
-  createOrder:(data,actions)=>actions.order.create({purchase_units:[{amount:{value:'97.00'},description:'NMA Foundations $97'}]}),
-  onApprove:(data,actions)=>actions.order.capture().then(()=>{location.href='./public/dashboard.html?tier=foundations&paid=97';})
-}).render('#paypal-97');
-paypal.Buttons({
-  style:{layout:'vertical',color:'gold',shape:'pill',label:'pay'},
-  createOrder:(data,actions)=>actions.order.create({purchase_units:[{amount:{value:'297.00'},description:'NMA Clinical Mastery $297'}]}),
-  onApprove:(data,actions)=>actions.order.capture().then(()=>{location.href='./public/dashboard.html?tier=clinical&paid=297';})
-}).render('#paypal-297');
-paypal.Buttons({
-  style:{layout:'vertical',color:'gold',shape:'pill',label:'pay'},
-  createOrder:(data,actions)=>actions.order.create({purchase_units:[{amount:{value:'497.00'},description:'NMA Pro Vault $497'}]}),
-  onApprove:(data,actions)=>actions.order.capture().then(()=>{location.href='./public/dashboard.html?tier=provault&paid=497';})
-}).render('#paypal-497');
+paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:'97.00'},description:'NMA Foundations $97'}]}),onApprove:(d,a)=>a.order.capture().then(()=>{location.href='./public/dashboard.html?tier=foundations&paid=97';})}).render('#paypal-97');
+paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:'297.00'},description:'NMA Clinical Mastery $297'}]}),onApprove:(d,a)=>a.order.capture().then(()=>{location.href='./public/dashboard.html?tier=clinical&paid=297';})}).render('#paypal-297');
+paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:'497.00'},description:'NMA Pro Vault $497'}]}),onApprove:(d,a)=>a.order.capture().then(()=>{location.href='./public/dashboard.html?tier=provault&paid=497';})}).render('#paypal-497');
 </script>
 </body>
 </html>

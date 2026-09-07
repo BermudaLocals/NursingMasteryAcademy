@@ -1,0 +1,5402 @@
+[
+  {
+    "id": 1,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 1",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 2,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "CNA",
+    "patient": "Ms. Chen 24F Asthma - Case 2",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 3,
+    "tier": "foundations",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 3",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 4,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "TEAS",
+    "patient": "Ms. Davis 82F UTI - Case 4",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 5,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "TEAS",
+    "patient": "Mr. Okafor 34M DKA - Case 5",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 6,
+    "tier": "foundations",
+    "category": "OB Hemorrhage",
+    "avatar": "RN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 6",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 7,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "CNA",
+    "patient": "Mr. Brown 55M - Case 7",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 8,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 8",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 9,
+    "tier": "foundations",
+    "category": "Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 9",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 10,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "RN",
+    "patient": "Ms. Chen 24F Asthma - Case 10",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 11,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "NewGrad",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 11",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 12,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "CNA",
+    "patient": "Ms. Davis 82F UTI - Case 12",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 13,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "CNA",
+    "patient": "Mr. Okafor 34M DKA - Case 13",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 14,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 14",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 15,
+    "tier": "provault",
+    "category": "Med-Safety Allergy",
+    "avatar": "LPN",
+    "patient": "Mr. Brown 55M - Case 15",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 16,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 16",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 17,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 17",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 18,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "RN",
+    "patient": "Ms. Chen 24F Asthma - Case 18",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 19,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "TEAS",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 19",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 20,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "LPN",
+    "patient": "Ms. Davis 82F UTI - Case 20",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 21,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "LPN",
+    "patient": "Mr. Okafor 34M DKA - Case 21",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 22,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Ms. Rivera 45F Postpartum - Case 22",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 23,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN",
+    "patient": "Mr. Brown 55M - Case 23",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 24,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "CNA",
+    "patient": "Ms. Garcia 45F - Case 24",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 25,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 25",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 26,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Chen 24F Asthma - Case 26",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 27,
+    "tier": "foundations",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 27",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 28,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "TEAS",
+    "patient": "Ms. Davis 82F UTI - Case 28",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 29,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "LPN",
+    "patient": "Mr. Okafor 34M DKA - Case 29",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 30,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Ms. Rivera 45F Postpartum - Case 30",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 31,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Brown 55M - Case 31",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 32,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "RN",
+    "patient": "Ms. Garcia 45F - Case 32",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 33,
+    "tier": "provault",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 33",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 34,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Chen 24F Asthma - Case 34",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 35,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 35",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 36,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "CNA",
+    "patient": "Ms. Davis 82F UTI - Case 36",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 37,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "TEAS",
+    "patient": "Mr. Okafor 34M DKA - Case 37",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 38,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Ms. Rivera 45F Postpartum - Case 38",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 39,
+    "tier": "provault",
+    "category": "Med-Safety Allergy",
+    "avatar": "CNA",
+    "patient": "Mr. Brown 55M - Case 39",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 40,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "TEAS",
+    "patient": "Ms. Garcia 45F - Case 40",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 41,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 41",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 42,
+    "tier": "provault",
+    "category": "Airway",
+    "avatar": "RN",
+    "patient": "Ms. Chen 24F Asthma - Case 42",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 43,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 43",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 44,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "RN",
+    "patient": "Ms. Davis 82F UTI - Case 44",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 45,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN",
+    "patient": "Mr. Okafor 34M DKA - Case 45",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 46,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 46",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 47,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "TEAS",
+    "patient": "Mr. Brown 55M - Case 47",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 48,
+    "tier": "provault",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 48",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 49,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 49",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 50,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "TEAS",
+    "patient": "Ms. Chen 24F Asthma - Case 50",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 51,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "Charge",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 51",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 52,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "Charge",
+    "patient": "Ms. Davis 82F UTI - Case 52",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 53,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Okafor 34M DKA - Case 53",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 54,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 54",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 55,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "NewGrad",
+    "patient": "Mr. Brown 55M - Case 55",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 56,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 56",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 57,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 57",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 58,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "TEAS",
+    "patient": "Ms. Chen 24F Asthma - Case 58",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 59,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "Charge",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 59",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 60,
+    "tier": "clinical",
+    "category": "Sepsis",
+    "avatar": "NewGrad",
+    "patient": "Ms. Davis 82F UTI - Case 60",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 61,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "TEAS",
+    "patient": "Mr. Okafor 34M DKA - Case 61",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 62,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "LPN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 62",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 63,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN",
+    "patient": "Mr. Brown 55M - Case 63",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 64,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "RN",
+    "patient": "Ms. Garcia 45F - Case 64",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 65,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "NewGrad",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 65",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 66,
+    "tier": "provault",
+    "category": "Airway",
+    "avatar": "CNA",
+    "patient": "Ms. Chen 24F Asthma - Case 66",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 67,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "NewGrad",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 67",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 68,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "Charge",
+    "patient": "Ms. Davis 82F UTI - Case 68",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 69,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "CNA",
+    "patient": "Mr. Okafor 34M DKA - Case 69",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 70,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "NewGrad",
+    "patient": "Ms. Rivera 45F Postpartum - Case 70",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 71,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "NewGrad",
+    "patient": "Mr. Brown 55M - Case 71",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 72,
+    "tier": "provault",
+    "category": "Med-Safety Expired",
+    "avatar": "Charge",
+    "patient": "Ms. Garcia 45F - Case 72",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 73,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 73",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 74,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "LPN",
+    "patient": "Ms. Chen 24F Asthma - Case 74",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 75,
+    "tier": "provault",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 75",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 76,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "RN",
+    "patient": "Ms. Davis 82F UTI - Case 76",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 77,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "CNA",
+    "patient": "Mr. Okafor 34M DKA - Case 77",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 78,
+    "tier": "clinical",
+    "category": "OB Hemorrhage",
+    "avatar": "RN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 78",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 79,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "CNA",
+    "patient": "Mr. Brown 55M - Case 79",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 80,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "TEAS",
+    "patient": "Ms. Garcia 45F - Case 80",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 81,
+    "tier": "foundations",
+    "category": "Hemorrhage",
+    "avatar": "RN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 81",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 82,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 82",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 83,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "TEAS",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 83",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 84,
+    "tier": "clinical",
+    "category": "Sepsis",
+    "avatar": "Charge",
+    "patient": "Ms. Davis 82F UTI - Case 84",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 85,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "Charge",
+    "patient": "Mr. Okafor 34M DKA - Case 85",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 86,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Ms. Rivera 45F Postpartum - Case 86",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 87,
+    "tier": "provault",
+    "category": "Med-Safety Allergy",
+    "avatar": "Charge",
+    "patient": "Mr. Brown 55M - Case 87",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 88,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "TEAS",
+    "patient": "Ms. Garcia 45F - Case 88",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 89,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 89",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 90,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "CNA",
+    "patient": "Ms. Chen 24F Asthma - Case 90",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 91,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 91",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 92,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Davis 82F UTI - Case 92",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 93,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "Charge",
+    "patient": "Mr. Okafor 34M DKA - Case 93",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 94,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 94",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 95,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Brown 55M - Case 95",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 96,
+    "tier": "clinical",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 96",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 97,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 97",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 98,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Chen 24F Asthma - Case 98",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 99,
+    "tier": "provault",
+    "category": "Cardiac",
+    "avatar": "CNA",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 99",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 100,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "RN",
+    "patient": "Ms. Davis 82F UTI - Case 100",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 101,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Okafor 34M DKA - Case 101",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 102,
+    "tier": "foundations",
+    "category": "OB Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Ms. Rivera 45F Postpartum - Case 102",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 103,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "CNA",
+    "patient": "Mr. Brown 55M - Case 103",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 104,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "TEAS",
+    "patient": "Ms. Garcia 45F - Case 104",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 105,
+    "tier": "provault",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 105",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 106,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "LPN",
+    "patient": "Ms. Chen 24F Asthma - Case 106",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 107,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 107",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 108,
+    "tier": "clinical",
+    "category": "Sepsis",
+    "avatar": "Charge",
+    "patient": "Ms. Davis 82F UTI - Case 108",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 109,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "NewGrad",
+    "patient": "Mr. Okafor 34M DKA - Case 109",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 110,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "LPN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 110",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 111,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "LPN",
+    "patient": "Mr. Brown 55M - Case 111",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 112,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "Charge",
+    "patient": "Ms. Garcia 45F - Case 112",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 113,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 113",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 114,
+    "tier": "clinical",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 114",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 115,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 115",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 116,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "LPN",
+    "patient": "Ms. Davis 82F UTI - Case 116",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 117,
+    "tier": "foundations",
+    "category": "DKA",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Okafor 34M DKA - Case 117",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 118,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 118",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 119,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN",
+    "patient": "Mr. Brown 55M - Case 119",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 120,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 120",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 121,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 121",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 122,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "LPN",
+    "patient": "Ms. Chen 24F Asthma - Case 122",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 123,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 123",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 124,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "TEAS",
+    "patient": "Ms. Davis 82F UTI - Case 124",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 125,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN",
+    "patient": "Mr. Okafor 34M DKA - Case 125",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 126,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 126",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 127,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "LPN",
+    "patient": "Mr. Brown 55M - Case 127",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 128,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "LPN",
+    "patient": "Ms. Garcia 45F - Case 128",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 129,
+    "tier": "foundations",
+    "category": "Hemorrhage",
+    "avatar": "LPN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 129",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 130,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "CNA",
+    "patient": "Ms. Chen 24F Asthma - Case 130",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 131,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 131",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 132,
+    "tier": "foundations",
+    "category": "Sepsis",
+    "avatar": "CNA",
+    "patient": "Ms. Davis 82F UTI - Case 132",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 133,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "NewGrad",
+    "patient": "Mr. Okafor 34M DKA - Case 133",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 134,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Ms. Rivera 45F Postpartum - Case 134",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 135,
+    "tier": "provault",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Brown 55M - Case 135",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 136,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "Charge",
+    "patient": "Ms. Garcia 45F - Case 136",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 137,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 137",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 138,
+    "tier": "provault",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 138",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 139,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 139",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 140,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "LPN",
+    "patient": "Ms. Davis 82F UTI - Case 140",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 141,
+    "tier": "provault",
+    "category": "DKA",
+    "avatar": "Charge",
+    "patient": "Mr. Okafor 34M DKA - Case 141",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 142,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "NewGrad",
+    "patient": "Ms. Rivera 45F Postpartum - Case 142",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 143,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "LPN",
+    "patient": "Mr. Brown 55M - Case 143",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 144,
+    "tier": "provault",
+    "category": "Med-Safety Expired",
+    "avatar": "LPN",
+    "patient": "Ms. Garcia 45F - Case 144",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 145,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 145",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 146,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 146",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 147,
+    "tier": "provault",
+    "category": "Cardiac",
+    "avatar": "TEAS",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 147",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 148,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "LPN",
+    "patient": "Ms. Davis 82F UTI - Case 148",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 149,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN",
+    "patient": "Mr. Okafor 34M DKA - Case 149",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 150,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "CNA",
+    "patient": "Ms. Rivera 45F Postpartum - Case 150",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 151,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "NewGrad",
+    "patient": "Mr. Brown 55M - Case 151",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 152,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "CNA",
+    "patient": "Ms. Garcia 45F - Case 152",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 153,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 153",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 154,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "RN",
+    "patient": "Ms. Chen 24F Asthma - Case 154",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 155,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "TEAS",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 155",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 156,
+    "tier": "foundations",
+    "category": "Sepsis",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Davis 82F UTI - Case 156",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 157,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "CNA",
+    "patient": "Mr. Okafor 34M DKA - Case 157",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 158,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Ms. Rivera 45F Postpartum - Case 158",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 159,
+    "tier": "clinical",
+    "category": "Med-Safety Allergy",
+    "avatar": "Charge",
+    "patient": "Mr. Brown 55M - Case 159",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 160,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "LPN",
+    "patient": "Ms. Garcia 45F - Case 160",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 161,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 161",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 162,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "NewGrad",
+    "patient": "Ms. Chen 24F Asthma - Case 162",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 163,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "Charge",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 163",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 164,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "NewGrad",
+    "patient": "Ms. Davis 82F UTI - Case 164",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 165,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Okafor 34M DKA - Case 165",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 166,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "RN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 166",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 167,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Brown 55M - Case 167",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 168,
+    "tier": "provault",
+    "category": "Med-Safety Expired",
+    "avatar": "NewGrad",
+    "patient": "Ms. Garcia 45F - Case 168",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 169,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "Charge",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 169",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 170,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 170",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 171,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "LPN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 171",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 172,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "NewGrad",
+    "patient": "Ms. Davis 82F UTI - Case 172",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 173,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "Charge",
+    "patient": "Mr. Okafor 34M DKA - Case 173",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 174,
+    "tier": "clinical",
+    "category": "OB Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Rivera 45F Postpartum - Case 174",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 175,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "RN",
+    "patient": "Mr. Brown 55M - Case 175",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 176,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "TEAS",
+    "patient": "Ms. Garcia 45F - Case 176",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 177,
+    "tier": "foundations",
+    "category": "Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 177",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 178,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "TEAS",
+    "patient": "Ms. Chen 24F Asthma - Case 178",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 179,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "CNA",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 179",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 180,
+    "tier": "foundations",
+    "category": "Sepsis",
+    "avatar": "Charge",
+    "patient": "Ms. Davis 82F UTI - Case 180",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 181,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "NewGrad",
+    "patient": "Mr. Okafor 34M DKA - Case 181",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 182,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Ms. Rivera 45F Postpartum - Case 182",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 183,
+    "tier": "clinical",
+    "category": "Med-Safety Allergy",
+    "avatar": "Charge",
+    "patient": "Mr. Brown 55M - Case 183",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 184,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "RN",
+    "patient": "Ms. Garcia 45F - Case 184",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 185,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 185",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 186,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 186",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 187,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "RN",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 187",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 188,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "Charge",
+    "patient": "Ms. Davis 82F UTI - Case 188",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 189,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "RN-BSN",
+    "patient": "Mr. Okafor 34M DKA - Case 189",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 190,
+    "tier": "provault",
+    "category": "OB Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Ms. Rivera 45F Postpartum - Case 190",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 191,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "CNA",
+    "patient": "Mr. Brown 55M - Case 191",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 192,
+    "tier": "clinical",
+    "category": "Med-Safety Expired",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Garcia 45F - Case 192",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 193,
+    "tier": "clinical",
+    "category": "Hemorrhage",
+    "avatar": "RN",
+    "patient": "Mr. Alvarez 68M Post-Op - Case 193",
+    "vitals": {
+      "bp": "88/54",
+      "hr": 112,
+      "spo2": 91,
+      "temp": 99.1,
+      "rr": 24,
+      "pain": 6
+    },
+    "stem": "POD1 hip, dressing saturated, dizzy, clammy",
+    "question": "First action?",
+    "options": [
+      "Give O2",
+      "Call Provider + Hold Heparin",
+      "Reassess 15min",
+      "Morphine"
+    ],
+    "correctIndex": 1,
+    "rationale": "Hypotension + tachycardia + bleeding = RED circulation. Call provider, hold heparin.",
+    "cjmmStep": "Prioritize Hypotheses",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 194,
+    "tier": "foundations",
+    "category": "Airway",
+    "avatar": "Charge",
+    "patient": "Ms. Chen 24F Asthma - Case 194",
+    "vitals": {
+      "bp": "122/78",
+      "hr": 118,
+      "spo2": 88,
+      "temp": 99.8,
+      "rr": 32,
+      "pain": 2
+    },
+    "stem": "Cannot complete sentences, accessory muscles, wheezing, SpO2 88% RA",
+    "question": "Priority?",
+    "options": [
+      "IV Fluids",
+      "O2 + sit upright + albuterol",
+      "Call provider only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "SpO2 88% + RR32 = RED breathing. Airway first.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 195,
+    "tier": "clinical",
+    "category": "Cardiac",
+    "avatar": "NewGrad",
+    "patient": "Mr. Jackson 55M Chest Pain - Case 195",
+    "vitals": {
+      "bp": "182/104",
+      "hr": 98,
+      "spo2": 96,
+      "temp": 98.6,
+      "rr": 20,
+      "pain": 9
+    },
+    "stem": "Crushing chest pain 9/10 radiating left arm, diaphoretic, 30min onset",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Aspirin if ordered + EKG + Rapid Response",
+      "Reassess",
+      "Discharge"
+    ],
+    "correctIndex": 1,
+    "rationale": "High BP + chest pain = cardiac RED. Rapid response.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 196,
+    "tier": "provault",
+    "category": "Sepsis",
+    "avatar": "RN",
+    "patient": "Ms. Davis 82F UTI - Case 196",
+    "vitals": {
+      "bp": "92/58",
+      "hr": 108,
+      "spo2": 93,
+      "temp": 101.8,
+      "rr": 26,
+      "pain": 3
+    },
+    "stem": "Confused from baseline, foul urine, temp 101.8, chills, BP dropping from 130",
+    "question": "First?",
+    "options": [
+      "Give Tylenol",
+      "Blood cultures + fluids + notify provider",
+      "Reassess",
+      "Catheter care only"
+    ],
+    "correctIndex": 1,
+    "rationale": "Temp + HR + low BP + RR = SIRS/sepsis RED.",
+    "cjmmStep": "Analyze Cues",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 197,
+    "tier": "clinical",
+    "category": "DKA",
+    "avatar": "Charge",
+    "patient": "Mr. Okafor 34M DKA - Case 197",
+    "vitals": {
+      "bp": "100/62",
+      "hr": 110,
+      "spo2": 97,
+      "temp": 98.9,
+      "rr": 28,
+      "pain": 4
+    },
+    "stem": "Fruity breath, Kussmaul RR28, glucose 480, dry mucous membranes, lethargic",
+    "question": "Priority?",
+    "options": [
+      "Give food",
+      "Fluids + insulin per protocol + check K+ + call provider",
+      "O2 only",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "DKA RED - fluids, insulin, K+ check.",
+    "cjmmStep": "Generate Solutions",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 198,
+    "tier": "clinical",
+    "category": "OB Hemorrhage",
+    "avatar": "TEAS",
+    "patient": "Ms. Rivera 45F Postpartum - Case 198",
+    "vitals": {
+      "bp": "86/50",
+      "hr": 120,
+      "spo2": 94,
+      "temp": 99.5,
+      "rr": 22,
+      "pain": 7
+    },
+    "stem": "6h post vaginal delivery, fundus boggy, heavy bleeding saturating pad 15min",
+    "question": "First?",
+    "options": [
+      "Give ibuprofen",
+      "Fundal massage + oxytocin + fluids + call provider",
+      "Reassess",
+      "Ambulate"
+    ],
+    "correctIndex": 1,
+    "rationale": "Boggy fundus + low BP + tachycardia = OB hemorrhage RED.",
+    "cjmmStep": "Take Action",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 199,
+    "tier": "foundations",
+    "category": "Med-Safety Allergy",
+    "avatar": "LPN",
+    "patient": "Mr. Brown 55M - Case 199",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 80,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 5
+    },
+    "stem": "Order: Amoxicillin 500mg PO TID. Allergy: PENICILLIN anaphylaxis",
+    "question": "Action?",
+    "options": [
+      "Give amoxicillin",
+      "Hold + notify provider - allergy to penicillin class",
+      "Give half dose",
+      "Give with food"
+    ],
+    "correctIndex": 1,
+    "rationale": "Allergy FAIL - amoxicillin is penicillin class.",
+    "cjmmStep": "Evaluate Outcomes",
+    "avatarHint": "Practice this 3x to master"
+  },
+  {
+    "id": 200,
+    "tier": "foundations",
+    "category": "Med-Safety Expired",
+    "avatar": "RN-BSN",
+    "patient": "Ms. Garcia 45F - Case 200",
+    "vitals": {
+      "bp": "110/70",
+      "hr": 78,
+      "spo2": 98,
+      "temp": 98.6,
+      "rr": 18,
+      "pain": 4
+    },
+    "stem": "Heparin 5000 units SC q8h - Expiration 2024-01 (expired 1yr)",
+    "question": "Action?",
+    "options": [
+      "Give anyway",
+      "Hold - expired med, notify pharmacy",
+      "Give double next time",
+      "Reassess"
+    ],
+    "correctIndex": 1,
+    "rationale": "Expired meds are never safe - Right Time fail.",
+    "cjmmStep": "Recognize Cues",
+    "avatarHint": "Practice this 3x to master"
+  }
+]

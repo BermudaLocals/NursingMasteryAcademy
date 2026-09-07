@@ -1,18 +1,22 @@
-{
-  "name": "Nursing Mastery Academy - The Practice Gym",
-  "short_name": "NMA Gym",
-  "description": "Supplemental Clinical Simulation & NCLEX Prep - Triage Engine + Med-Safety Loop - 200 NGN Cases",
-  "start_url": "/NursingMasteryAcademy/public/dashboard.html?tier=clinical",
-  "display": "standalone",
-  "background_color": "#0A1931",
-  "theme_color": "#0A1931",
-  "orientation": "portrait",
-  "scope": "/NursingMasteryAcademy/",
-  "icons": [
-    {
-      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iIzBBMTkzMSIvPjx0ZXh0IHg9Ijk2IiB5PSIxMTAiIGZvbnQtc2l6ZT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNDNUE4ODAiPvCfkrw8L3RleHQ+PC9zdmc+",
-      "sizes": "192x192",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+const CACHE = 'nma-v11';
+const ASSETS = [
+  '/NursingMasteryAcademy/',
+  '/NursingMasteryAcademy/index.html',
+  '/NursingMasteryAcademy/manifest.json',
+  '/NursingMasteryAcademy/public/dashboard.html',
+  '/NursingMasteryAcademy/public/triage.html',
+  '/NursingMasteryAcademy/public/medsafety.html',
+  '/NursingMasteryAcademy/public/cases.json',
+  '/NursingMasteryAcademy/public/manifest.json'
+];
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS).catch(()=>{})));
+});
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));
+});
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request).then(cached => cached || fetch(e.request).then(res => res).catch(()=> caches.match('/NursingMasteryAcademy/public/dashboard.html')))
+  );
+});

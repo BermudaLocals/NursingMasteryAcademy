@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedTrack Pro - Medical Tracking Platform</title>
     <link rel="stylesheet" href="/css/style.css">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0A1931">
 </head>
 <body>
     <div class="auth-container">
@@ -123,5 +125,6 @@
             }
         });
     </script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js")}</script>
 </body>
 </html>

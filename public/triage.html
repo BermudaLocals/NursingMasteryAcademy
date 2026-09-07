@@ -23,6 +23,8 @@ header{background:var(--navy);color:white;padding:12px 20px;display:flex;justify
 textarea{width:100%;border:2px solid #E2E8F0;border-radius:12px;padding:12px;font-size:14px}
 .small{font-size:11px;color:#64748B}
 </style>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0A1931">
 </head>
 <body>
 <header>
@@ -125,5 +127,6 @@ function startVoice(){
 }
 render();
 </script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js")}</script>
 </body>
 </html>

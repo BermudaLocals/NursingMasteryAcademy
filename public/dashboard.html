@@ -24,6 +24,8 @@ header{background:var(--navy);color:white;padding:16px 20px;display:flex;justify
 .bar>div{height:100%;background:var(--navy);transition:width .5s}
 .small{font-size:11px;color:#64748B}
 </style>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0A1931">
 </head>
 <body>
 <header>
@@ -52,5 +54,6 @@ function loadStats(){const tier=getTier();document.getElementById('tierBadge').t
 function genCert(){const c=document.createElement('canvas');c.width=1200;c.height=800;const x=c.getContext('2d');x.fillStyle='#0A1931';x.fillRect(0,0,1200,800);x.fillStyle='#C5A880';x.font='bold 48px sans-serif';x.fillText('Nursing Mastery Academy',120,150);x.fillStyle='white';x.font='24px sans-serif';x.fillText('Certificate - Practice Gym',120,220);x.font='18px sans-serif';x.fillText(`Tier: ${localStorage.getItem('nma_tier')} • XP: ${localStorage.getItem('nma_xp')||0} • Cases: ${localStorage.getItem('nma_cases')||0}/200`,120,280);x.fillText('Supplemental only. Non-accredited.',120,700);const a=document.createElement('a');a.download='NMA-Certificate.png';a.href=c.toDataURL();a.click();}
 loadStats();
 </script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js")}</script>
 </body>
 </html>

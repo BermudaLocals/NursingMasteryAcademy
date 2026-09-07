@@ -24,6 +24,8 @@ header{background:var(--navy);color:white;padding:12px 20px;display:flex;justify
 .stop{border:3px solid var(--red);background:#FEF2F2;padding:16px;border-radius:12px;display:none}
 .ok{border:3px solid var(--green);background:#F0FDF4;padding:16px;border-radius:12px;display:none}
 </style>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0A1931">
 </head>
 <body>
 <header>
@@ -112,5 +114,6 @@ function attemptHold(){
 function nextCase(){current=(current+1)%meds.length; localStorage.setItem('nma_med_case',current); render(); window.scrollTo(0,0);}
 render();
 </script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js")}</script>
 </body>
 </html>

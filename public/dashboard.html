@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedTrack Pro - Dashboard</title>
-    <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Nursing Mastery Academy</title>
+<style>
+:root{--navy:#0A1931;--gold:#C5A880;--red:#DC2626;--bg:#F8FAFC}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,sans-serif}
+body{background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:white;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.badge{background:var(--gold);color:var(--navy);padding:4px 12px;border-radius:20px;font-weight:800;font-size:12px;text-transform:uppercase}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+@media(max-width:700px){.grid3{grid-template-columns:1fr}}
+.card{background:white;border-radius:16px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.06);border:1px solid #E2E8F0}
+.stat{font-size:32px;font-weight:900}
+.label{font-size:12px;opacity:.7;font-weight:700;letter-spacing:.05em}
+.btn{display:inline-block;padding:14px 20px;border-radius:12px;font-weight:800;text-decoration:none;text-align:center;cursor:pointer;border:none;width:100%;margin-top:10px}
+.btn-navy{background:var(--navy);color:white}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-outline{background:white;border:2px solid var(--navy);color:var(--navy)}
+.bar{height:8px;background:#E2E8F0;border-radius:4px;overflow:hidden;margin:6px 0 12px}
+.bar>div{height:100%;background:var(--navy);transition:width .5s}
+.small{font-size:11px;color:#64748B}
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">MedTrack Pro</div>
-        <div class="nav-links">
-            <a href="/dashboard.html" class="active">Dashboard</a>
-            <a href="/pets.html">Pet Tracking</a>
-            <a href="/baby.html">Baby Tracker</a>
-            <a href="/nursing.html">Nursing</a>
-        </div>
-        <div class="nav-user">
-            <span id="user-name">User</span>
-            <button onclick="logout()">Logout</button>
-        </div>
-    </nav>
-
-    <main class="dashboard">
-        <h1>Welcome to MedTrack Pro</h1>
-        
-        <div class="module-grid">
-            <div class="module-card">
-                <h3>🐾 Pet Diagnostics</h3>
-                <p>Track stool quality, eating patterns, vital signs, and generate vet reports for your pets.</p>
-                <a href="/pets.html" class="btn-primary">Open Pet Tracking</a>
-            </div>
-            
-            <div class="module-card">
-                <h3>👶 Baby Health Tracker</h3>
-                <p>Monitor growth, feeding, sleep, milestones, and vaccinations from newborn to preschool.</p>
-                <a href="/baby.html" class="btn-primary">Open Baby Tracker</a>
-            </div>
-            
-            <div class="module-card">
-                <h3>🏥 Nursing Education</h3>
-                <p>Dosage calculator, triage simulator, and clinical reference tools.</p>
-                <a href="/nursing.html" class="btn-primary">Open Nursing</a>
-            </div>
-        </div>
-    </main>
-
-    <script src="/js/app.js"></script>
+<header>
+<div><b>NMA</b> • Practice Gym • <a href="../index.html" style="color:var(--gold)">← Home</a></div>
+<div id="tierBadge" class="badge">LOADING</div>
+</header>
+<div class="wrap">
+<h1 id="welcome" style="font-size:28px;margin:10px 0">Welcome to Your Gym</h1>
+<p class="small">Supplemental simulation only. Non-accredited. Synthetic patients only. Progress saved locally.</p>
+<div class="grid3">
+<div class="card"><div class="label">XP / LEVEL</div><div id="xp" class="stat">0 XP</div><div class="bar"><div id="xpBar" style="width:10%"></div></div><div class="small">Level 1 • Do cases to level up</div></div>
+<div class="card"><div class="label">STREAK</div><div id="streak" class="stat">1 DAY</div><div class="small" id="streakMsg">Come back tomorrow</div></div>
+<div class="card"><div class="label">CASES DONE</div><div id="cases" class="stat">0 / 200</div><div class="bar"><div id="caseBar" style="width:0%"></div></div><div class="small">Goal: 200 NGN reps</div></div>
+</div>
+<div class="grid3">
+<div class="card"><h3>Triage Engine LIVE</h3><p class="small">6 vitals • Red Zone logic</p><a class="btn btn-navy" href="./triage.html">Start Triage →</a></div>
+<div class="card"><h3>Med-Safety Loop</h3><p class="small">5 Rights checker</p><a class="btn btn-gold" href="./medsafety.html">Start Med-Safety →</a></div>
+<div class="card"><h3>200 NGN Cases</h3><p class="small">Aligned to CJMM 6 steps</p><a class="btn btn-outline" href="./triage.html?mode=cases">Practice Cases →</a><button class="btn btn-outline" onclick="genCert()">Download Certificate</button></div>
+</div>
+<div class="card"><h3>CJMM 6 Steps</h3><div id="cjmm"></div></div>
+</div>
+<script>
+function getTier(){const p=new URLSearchParams(location.search);let t=p.get('tier')||localStorage.getItem('nma_tier')||'foundations';localStorage.setItem('nma_tier',t);return t;}
+function initStreak(){const today=new Date().toDateString();const last=localStorage.getItem('nma_last');let s=parseInt(localStorage.getItem('nma_streak')||'1');if(last!==today){if(last){const d=(new Date(today)-new Date(last))/86400000;if(d===1)s++;else if(d>1)s=1;}localStorage.setItem('nma_streak',s);localStorage.setItem('nma_last',today);}return s;}
+function loadStats(){const tier=getTier();document.getElementById('tierBadge').textContent=tier.toUpperCase()+' • PAID';document.getElementById('welcome').textContent=`Welcome to ${tier.charAt(0).toUpperCase()+tier.slice(1)} Gym`;const xp=parseInt(localStorage.getItem('nma_xp')||'0');const cases=parseInt(localStorage.getItem('nma_cases')||'0');const streak=initStreak();document.getElementById('xp').textContent=xp+' XP';document.getElementById('xpBar').style.width=Math.min(100,xp/20)+'%';document.getElementById('streak').textContent=streak+' DAY'+(streak>1?'S':'');document.getElementById('cases').textContent=cases+' / 200';document.getElementById('caseBar').style.width=(cases/200*100)+'%';const steps=['Recognize Cues','Analyze Cues','Prioritize Hypo','Generate Solutions','Take Action','Evaluate Outcomes'];const vals=JSON.parse(localStorage.getItem('nma_cjmm')||'[60,55,45,50,62,48]');const d=document.getElementById('cjmm');d.innerHTML='';steps.forEach((s,i)=>{const r=document.createElement('div');r.innerHTML=`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700"><span>${s}</span><span>${vals[i]}%</span></div><div class="bar"><div style="width:${vals[i]}%"></div></div>`;d.appendChild(r);});}
+function genCert(){const c=document.createElement('canvas');c.width=1200;c.height=800;const x=c.getContext('2d');x.fillStyle='#0A1931';x.fillRect(0,0,1200,800);x.fillStyle='#C5A880';x.font='bold 48px sans-serif';x.fillText('Nursing Mastery Academy',120,150);x.fillStyle='white';x.font='24px sans-serif';x.fillText('Certificate - Practice Gym',120,220);x.font='18px sans-serif';x.fillText(`Tier: ${localStorage.getItem('nma_tier')} • XP: ${localStorage.getItem('nma_xp')||0} • Cases: ${localStorage.getItem('nma_cases')||0}/200`,120,280);x.fillText('Supplemental only. Non-accredited.',120,700);const a=document.createElement('a');a.download='NMA-Certificate.png';a.href=c.toDataURL();a.click();}
+loadStats();
+</script>
 </body>
 </html>
